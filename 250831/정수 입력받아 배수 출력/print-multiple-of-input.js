@@ -4,7 +4,7 @@ let input =  fs.readFileSync(0).toString().trim()
 let answer = ''
 let number = Number(input)
 
-for(let i = number; i <= i * 5; i+=number) {
+for(let i = number; i <= number * 5; i+=number) {
     answer += `${i} `
 }
 
