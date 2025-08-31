@@ -3,16 +3,17 @@ let input = fs.readFileSync(0).toString().trim()
 
 let score = Number(input)
 
+let answer = ''
 for(let i = score; i <= 100; i++) {
     if(i >= 90) {
-        console.log('A')
+       answer += "A" + " "
     } else if(i >= 80) {
-        console.log('B')
+       answer += "B" + " "
     } else if(i >= 70) {
-        console.log('C')
+        answer += "C" + " "
     } else if(i >= 60) {
-        console.log('D')
+        answer += "D" + " "
     } else {
-        console.log('F')
+        answer += "F" + " "
     }
 }
