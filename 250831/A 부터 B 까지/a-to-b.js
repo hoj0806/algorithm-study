@@ -7,10 +7,12 @@ let b = Number(input[1])
 let answer = ''
 
 while(true) {
-    answer += `${a} `
+   
     if(a > b) {
         break
     }
+
+    answer += `${a} `
 
     if(a % 2 !== 0) {
         a*=2
