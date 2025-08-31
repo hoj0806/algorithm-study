@@ -11,3 +11,5 @@ for(let i = 0; i < count; i++) {
         answer += `${arr[i]} `
     }
 }
+
+console.log(answer)
