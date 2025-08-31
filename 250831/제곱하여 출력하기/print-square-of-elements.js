@@ -3,6 +3,10 @@ let input = fs.readFileSync(0).toString().split("\n")
 
 let a = Number(input[0])
 
-let arr = input[1].split(" ").map((n) => Number(n**a))
+let arr = input[1].split(" ").map((n) => Number(n))
 
-console.log(arr.join(" "))
+let answer = ''
+for(let i = 0; i <= a; i++) {
+    answer += `${i**2} `
+}
+console.log(answer)
