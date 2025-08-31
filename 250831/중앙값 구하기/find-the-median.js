@@ -16,4 +16,14 @@ if(a > b) {
             console.log(c)
         }
     }
+} else {
+    if(c < a) {
+        console.log(a)
+    } else {
+        if(c > b) {
+            console.log(b)
+        } else {
+            console.log(c)
+        }
+    }
 }
