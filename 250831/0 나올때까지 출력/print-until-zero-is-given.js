@@ -5,10 +5,9 @@ let arr = input.map(Number)
 
 let idx = 0
 while(true) {
-    idx+=1
     if(arr[idx] === 0) {
         break
     }
     console.log(arr[idx])
-    
+    idx++
 }
