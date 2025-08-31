@@ -7,8 +7,12 @@ let a = 0
 
 for(let i = 1; i <=100; i++) {
     if(a >= n) {
+       if(a === n) {
         console.log(i)
-        break
+       } else {
+        console.log(i - 1)
+       }
+       break
     }
     a+=i
 }
