@@ -4,9 +4,8 @@ let input =  fs.readFileSync(0).toString().trim()
 let answer = ''
 let number = Number(input)
 
-for(let i = 0; i < 5; i++) {
-    answer+= `${number} `
-    number*=2
+for(let i = 1; i <= 5; i++) {
+    answer+= `${number * i} `
 }
 
 console.log(answer)
