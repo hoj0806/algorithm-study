@@ -10,7 +10,7 @@ for(let i = 1; i <=100; i++) {
        if(a === n) {
         console.log(i)
        } else {
-        console.log(i - 1)
+        console.log(i-1)
        }
        break
     }
