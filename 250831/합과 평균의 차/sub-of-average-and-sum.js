@@ -8,4 +8,7 @@ let c = Number(input[2])
 let sum = a + b + c
 let average = sum / 3
 
-console.log(sum, average, sum - average)
+console.log(sum)
+console.log(average)
+console.log(sum - average)
+
