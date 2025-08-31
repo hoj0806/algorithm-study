@@ -9,7 +9,7 @@ for(let i = 1; i <=100; i++) {
     if(a >= n) {
        if(a === n) {
         console.log(i)
-       } else {
+       } else if(a > n) {
         console.log(i-1)
        }
        break
