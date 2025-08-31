@@ -9,3 +9,5 @@ let answer = ''
 for(let i = b; i >= a; i-=1) {
     answer += `${i} `
 }
+
+console.log(answer)
