@@ -17,3 +17,5 @@ for(let i = score; i <= 100; i++) {
         answer += "F" + " "
     }
 }
+
+console.log(answer)
