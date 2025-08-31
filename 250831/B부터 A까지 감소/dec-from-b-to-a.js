@@ -6,6 +6,6 @@ let b = Number(input[1])
 
 
 let answer = ''
-for(let i = b; i >= a; i--) {
+for(let i = b; i >= a; i-=1) {
     answer += `${i} `
 }
