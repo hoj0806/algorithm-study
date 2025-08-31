@@ -6,13 +6,16 @@ let n = Number(input)
 let a = 0
 
 for(let i = 1; i <=100; i++) {
+    console.log(a, i)
     if(a >= n) {
        if(a === n) {
         console.log(i)
+        break
        } else if(a > n) {
         console.log(i-1)
+        break
        }
-       break
+      
     }
     a+=i
 }
