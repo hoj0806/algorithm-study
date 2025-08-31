@@ -3,7 +3,7 @@ let input = fs.readFileSync(0).toString().split("\n")
 
 let gender = input[0]
 let age = Number(input[1])
-
+console.log(gender, age)
 if(gender === 0) {
     if(age >= 19) {
         console.log('MAN')
