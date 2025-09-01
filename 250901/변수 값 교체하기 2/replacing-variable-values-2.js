@@ -1,4 +1,4 @@
-let a = 5, let b = 3
+let a = 5, b = 3
 let temp
 
 temp = a
