@@ -1,4 +1,4 @@
 const fs = require('fs')
 let n = Number(fs.readFileSync(0).toString())
 
-console.log(a * 2 + 3)
+console.log(n * 2 + 3)
