@@ -1,9 +1,4 @@
 let a = 5, b = 3
-let temp
-
-temp = a
-a = b
-b = temp
+b = a
 console.log(a)
 console.log(b)
-console.log(temp)
