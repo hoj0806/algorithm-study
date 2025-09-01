@@ -3,7 +3,7 @@ let input = fs.readFileSync(0).toString().trim().split("\n").map(Number)
 
 let [a, b] = input
 
-a=+87
+a+=87
 b%=10
 
 console.log(a)
