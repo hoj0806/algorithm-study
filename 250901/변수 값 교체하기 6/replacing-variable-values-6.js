@@ -1,4 +1,5 @@
-let [a, b] = [5, 8];
+let [a, b] = [2, 5];
 [a, b] = [b, a];
-console.log(a); // 8
-console.log(b); // 5
+
+console.log(a); 
+console.log(b);
