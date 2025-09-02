@@ -7,7 +7,7 @@ let answer = ''
 
 while(a >= b) {
     answer += a + " "
-    a--
+    a-=2
 }
 
 console.log(answer)
