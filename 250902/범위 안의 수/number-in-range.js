@@ -4,7 +4,7 @@ const input = fs.readFileSync(0).toString().trim()
 let a = Number(input)
 
 if(a >= 10 && a <= 20) {
-    console.log('Yes')
+    console.log('yes')
 } else {
-    console.log('No')
+    console.log('no')
 }
