@@ -6,8 +6,9 @@ let n = input[0]
 let r = 0
 
 for(let i = 1; i <= n; i++) {
+  
     if((input[i] % 2 !== 0) && (input[i] % 3 === 0)) {
-        r+=i
+        r+=input[i]
     }
 }
 
