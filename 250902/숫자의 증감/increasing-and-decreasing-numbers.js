@@ -6,7 +6,7 @@ let [str, num] = input
 let answer = ''
 
 if(str === 'A') {
-    for(let i = 1; i < Number(num); i+=) {
+    for(let i = 1; i < Number(num); i++) {
         answer += i + " "
     }
 } else {
