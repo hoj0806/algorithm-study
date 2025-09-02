@@ -6,7 +6,7 @@ let answer = ''
 let [a, b] = input
 
 
-for(let i = b; i >= a; i--) {
+for(let i = a; i >= b; i--) {
     if(i % 2 !== 0) {
         answer += i + " "
     }
