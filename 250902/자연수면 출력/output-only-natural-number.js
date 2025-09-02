@@ -7,7 +7,7 @@ let [a, b] = input
 let answer = ''
 if(a > 0) {
     for(let i = 1; i <= b; i++) {
-        answer += b
+        answer += a
     }
     console.log(answer) 
 } else {
