@@ -3,4 +3,4 @@ const input = fs.readFileSync(0).toString().trim().split(" ").map(Number)
 
 let [a, b] = input
 
-console.log((a / b).toFixed(21))
+console.log((a / b).toFixed(40))
