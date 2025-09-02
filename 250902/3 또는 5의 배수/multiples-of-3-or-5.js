@@ -1,7 +1,7 @@
 const fs = require('fs')
 const input = fs.readFileSync(0).toString().trim()
 
-if a = Number(input)
+let a = Number(input)
 
 if(a % 3 === 0) {
     console.log('Yes')
