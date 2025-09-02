@@ -8,8 +8,10 @@ let [a, b] = input
 let answer = `${parseInt(a / b)}.`
 
 let  r =  (a % b) * 10
-for(let i = 1; i <= 21; i++) {
-    console.log(r / b)
+for(let i = 1; i <= 20; i++) {
+    answer += (parseInt(r / b))
+    r = (r % b) * 10
 }
 
+console.log(answer)
 
