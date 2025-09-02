@@ -15,3 +15,5 @@ if(a === b) {
 } else {
     answer += '0 '
 }
+
+console.log(answer)
