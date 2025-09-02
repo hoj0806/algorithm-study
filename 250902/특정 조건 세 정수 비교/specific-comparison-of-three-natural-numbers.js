@@ -3,14 +3,17 @@ const input = fs.readFileSync(0).toString().trim().split(" ").map(Number)
 
 let [a, b, c] = input
 
+let rseultA , resultB
 if(a <= b && a <= c) {
-    console.log(1)
+    rseultA = 1
 } else {
-    console.log(0)
+    rseultA = 0
 }
 
 if((a === b) && (b === c)) {
-    console.log(1)
+    rseultB = 1
 } else {
-    console.log(0)
+    rseultB = 0
 }
+
+console.log(rseultA, rseultB)
