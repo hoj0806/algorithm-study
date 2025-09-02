@@ -5,4 +5,4 @@ let [a, b] = input.map(Number)
 
 let add = a + b
 
-console.log(add, add.toFixed(1))
+console.log(add, (add/  2).toFixed(1))
