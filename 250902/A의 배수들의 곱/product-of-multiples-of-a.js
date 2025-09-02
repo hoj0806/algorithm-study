@@ -7,7 +7,7 @@ let p = 1
 
 for(let i = 1; i <= b; i++) {
     if(i % a === 0) {
-        p+=i
+        p*=i
     }
 }
 
