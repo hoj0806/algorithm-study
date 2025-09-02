@@ -6,7 +6,7 @@ let [a, b] = input
 let sum = 0
 
 for(let i = a; i <= b; i++) {
-    if(i % 6 === 0 && i % 8 === 0) {
+    if(i % 6 === 0 && i % 8 !== 0) {
         sum+=i
     }
 }
