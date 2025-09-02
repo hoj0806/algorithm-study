@@ -3,9 +3,13 @@ const input = fs.readFileSync(0).toString().trim().split(" ").map(Number)
 
 let [a, b] = input
 
-console.log((a / b))
+
 
 let answer = `${parseInt(a / b)}.`
 
-console.log(answer)
+b*=10
+for(let i = 1; i <= 21; i++) {
+    console.log(a / b)
+}
+
 
