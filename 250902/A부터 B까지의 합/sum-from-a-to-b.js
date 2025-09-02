@@ -5,7 +5,7 @@ let [a, b] = input
 
 let r = 0
 
-for(let i = 1; i <= b; i++) {
+for(let i = a; i <= b; i++) {
     r+=i
 }
 
