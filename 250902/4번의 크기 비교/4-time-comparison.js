@@ -2,7 +2,7 @@ const fs = require('fs')
 const input = fs.readFileSync(0).toString().trim().split("\n")
 
 let a = Number(input[0])
-let [b, c, d, e] = input[1].map(Number)
+let [b, c, d, e] = input[1].split(" ").map(Number)
 
 console.log(a > b ? 1 : 0)
 console.log(a > c ? 1 : 0)
