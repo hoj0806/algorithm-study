@@ -5,7 +5,7 @@ let cnt = 0
 
 for(let i = 0; i < input.length; i++) {
     let n = input[i]
-    if(i % 2 === 0) {
+    if(n % 2 === 0) {
         cnt++
     }
 }
