@@ -6,4 +6,4 @@ let [a, b, c] = input.map(Number)
 let add = a + b + c
 
 console.log(add)
-console.log(Math.floor(add / 3))
+console.log(parseInt(add / 3))
