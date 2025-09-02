@@ -3,14 +3,15 @@ const input = fs.readFileSync(0).toString().trim().split(" ").map(Number)
 
 let [a, b] = input
 
+let answer = ''
 if(a < b) {
-    console.log(1)
+    answer += '1 '
 } else {
-    console.log(0)
+    answer += '0 ' 
 }
 
 if(a === b) {
-    console.log(1)
+    answer += '1 '
 } else {
-    console.log(0)
+    answer += '0 '
 }
