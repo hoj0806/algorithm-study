@@ -13,5 +13,5 @@ for(let i = 1; i <= 20; i++) {
     r = (r % b) * 10
 }
 
-console.log(answer)
+console.log(answer.length)
 
