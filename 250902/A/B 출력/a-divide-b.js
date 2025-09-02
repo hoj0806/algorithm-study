@@ -7,9 +7,9 @@ let [a, b] = input
 
 let answer = `${parseInt(a / b)}.`
 
-b = (a % b) * 10
+let  r =  (a % b) * 10
 for(let i = 1; i <= 21; i++) {
-    console.log(b / a)
+    console.log(r / b)
 }
 
 
