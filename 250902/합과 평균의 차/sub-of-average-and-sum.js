@@ -6,6 +6,6 @@ let [a, b, c] = input.map(Number)
 let add = a + b + c
 let average = add / 3
 
-console.log(add)
+console.log(a, b, c)
 console.log(average)
 console.log(add - average)
