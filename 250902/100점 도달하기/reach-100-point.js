@@ -15,7 +15,7 @@ for(let i = score; i <= 100; i++) {
     } else if(i >= 60) {
         answer += 'D '
     } else {
-        answer += 'F'
+        answer += 'F '
     }
 }
 
