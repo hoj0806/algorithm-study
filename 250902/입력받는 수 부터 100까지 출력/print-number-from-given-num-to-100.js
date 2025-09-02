@@ -1,7 +1,7 @@
 const fs = require('fs')
 const input = fs.readFileSync(0).toString().trim()
 
-let n = NuMBER(input)
+let n = Number(input)
 
 let answer = ''
 
