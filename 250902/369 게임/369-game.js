@@ -4,6 +4,7 @@ const input = fs.readFileSync(0).toString().trim()
 let n = Number(input)
 
 let answer = ''
+
 for(let i = 1; i <= n; i++) {
     if((i % 3 === 0) || 
     (String(i).indexOf("3") !== -1 || 
@@ -15,3 +16,5 @@ for(let i = 1; i <= n; i++) {
         answer += i + " "
     }
 }
+
+console.log(answer)
