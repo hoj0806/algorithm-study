@@ -15,4 +15,4 @@ while(true) {
     }
 }
 
-console.log(sum / idx)
+console.log((sum / idx).toFixed(2))
