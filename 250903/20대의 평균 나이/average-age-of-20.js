@@ -8,10 +8,10 @@ while(true) {
     let age = input[idx]
 
     if(age >= 30) {
-      
+        console.log((sum))
         break
     } 
-
+    
     idx++
     sum+=age    
 }
