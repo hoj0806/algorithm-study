@@ -8,11 +8,11 @@ while(true) {
     let age = input[idx]
 
     if(age >= 30) {
-        let result = sum / idx
-        console.log(result.toFixed(2))
         break
     } else {
          idx++
         sum+=age    
     }
 }
+
+console.log(sum / idx)
