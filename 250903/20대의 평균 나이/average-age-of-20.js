@@ -11,8 +11,8 @@ while(true) {
         let result = sum / idx
         console.log(result.toFixed(2))
         break
-    } 
-    
-    idx++
-    sum+=age    
+    } else {
+         idx++
+        sum+=age    
+    }
 }
