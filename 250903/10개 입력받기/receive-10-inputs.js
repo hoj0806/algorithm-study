@@ -11,7 +11,7 @@ for(ele of input) {
     }
 }
 
-let sum = arr.reduce((a, c) + => a + c)
+let sum = arr.reduce((a, c) => a + c)
 let average = (sum / arr.length).toFixed(1)
 
 console.log(sum, average)
