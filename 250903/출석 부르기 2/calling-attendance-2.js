@@ -17,5 +17,6 @@ while(true) {
         console.log('Sam')
     } else {
         console.log('Vacancy')
+        break
     }
 }
