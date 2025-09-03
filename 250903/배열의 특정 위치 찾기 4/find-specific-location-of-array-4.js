@@ -13,6 +13,7 @@ for(ele of input) {
     }
 }
 
-let sum = arr.reduce((a, c) => a + c)
+let l = arr.length
+let sum = l === 0 ? 0 : arr.reduce((a, c) => a + c)
 
 console.log(arr.length, sum)
