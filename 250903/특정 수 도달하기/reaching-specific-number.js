@@ -12,6 +12,6 @@ for(let i = 0; i < input.length; i++) {
 }
 
 let sum = arr.reduce((a, b) => a + b)
-let average = sum / (arr.length).toFixed(1)
+let average = (sum / arr.length).toFixed(1)
 
 console.log(sum , average)
