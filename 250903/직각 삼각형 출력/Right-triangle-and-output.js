@@ -6,8 +6,8 @@ let n = Number(input)
 
 for(let i = 1; i <= n; i++) {
     let str = ''
-    for(let j = i; j <= n; j++) {
+   for(let j = 1; j <= (2 * i) - 1; j++) {
         str += "*"
-    }
-    console.log(str)
+   }
+   console.log(str)
 }
