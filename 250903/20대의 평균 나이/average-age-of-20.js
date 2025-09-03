@@ -8,7 +8,8 @@ while(true) {
     let age = input[idx]
 
     if(age >= 30) {
-        console.log((sum / idx).toFixed(2))
+        let result = sum / idx
+        console.log(result.toFixed(2))
         break
     } 
     
