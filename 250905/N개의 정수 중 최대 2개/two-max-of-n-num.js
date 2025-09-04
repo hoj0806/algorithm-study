@@ -5,7 +5,7 @@ let r = input[1].split(" ").map(Number)
 let arr = []
 
 let maxValue = Number.MIN_SAFE_INTEGER;
-let nextMaxValue = Number.MIN_SAFE_INTEGER;
+let nextMaxValue = -2147483648
 for(let i = 0; i < r.length; i++) {
     if(r[i] > maxValue) {
         maxValue = r[i]
