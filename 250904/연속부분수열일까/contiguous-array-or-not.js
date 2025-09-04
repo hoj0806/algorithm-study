@@ -21,9 +21,8 @@ for(let i = 0; i < a - b + 1; i++) {
     }
 }
 
-if(arr1.length > arr2.length) {
+if(arr2.length > arr1.length) {
     console.log("No")
 } else {
-console.log(allMatched === true ? "Yes" : "No")
-
+    console.log(allMatched === true ? "Yes" : "No")
 }
