@@ -13,7 +13,7 @@ for(let i = 0; i < arr.length; i++) {
 }
 
 for(let i = 0; i < count.length; i++) {
-    if(count[i] === 1 && count[i] > maxValue) {
+    if(count[i] === 1 && i > maxValue) {
         maxValue = i
     }
 }
