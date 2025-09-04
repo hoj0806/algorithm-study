@@ -10,6 +10,7 @@ for(let i = 0; i < str.length - find.length + 1; i++) {
     for(let j = 0; j < find.length; j++) {
         if(str[i + j] !== find[j]) {
             isMatched = false
+            break
         }
     }
     if(isMatched) {
