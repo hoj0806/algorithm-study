@@ -6,6 +6,6 @@ let [a, b] = input
 let arr = b.split("")
 
 arr[0] = a[0]
-arr[1] = b[1]
+arr[1] = a[1]
 
-console.log(b.join(""))
+console.log(arr.join(""))
