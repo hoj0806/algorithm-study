@@ -6,7 +6,7 @@ let str = input[0]
 for(let i = 1; i < input.length; i++) {
     
     let n = Number(input[i])
-    if(n > str.length) {
+    if(n >= str.length) {
         str = str.slice(0, -1)
     } else {
         str = str.slice(0, n) + str.slice(n + 1)
