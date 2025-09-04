@@ -10,4 +10,4 @@ if(nextCode > 122) {
     nextCode-=26
 }
 
-console.log(String.fromChaRCode(nextCode))
+console.log(String.fromCharCode(nextCode))
