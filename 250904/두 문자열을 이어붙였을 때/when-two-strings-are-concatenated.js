@@ -1,5 +1,5 @@
 const fs = require('fs')
-const input = fs.readaFileSync(0).toString().trim().split('\n')
+const input = fs.readFileSync(0).toString().trim().split('\n')
 
 let [a, b] = input
 
