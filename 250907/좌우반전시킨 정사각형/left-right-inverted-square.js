@@ -1,0 +1,12 @@
+const fs = require('fs')
+const input = fs.readFileSync(0).toString().trim()
+
+let n = Number(input)
+
+for(let i = 1; i <= n; i++) {
+    let str = ''
+    for(let j = n; j >= 1; j--) {
+        str += j * i +  " "
+    }
+    console.log(str)
+}
