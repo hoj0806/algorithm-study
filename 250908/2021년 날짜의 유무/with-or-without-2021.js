@@ -5,6 +5,10 @@ let [m, d] = input[0].split(" ").map(Number);
 // Please Write your code here.
 
 function solution(month, day) {
+    if(month > 12) {
+        return "No"
+    }
+    
     if(month === 2) {
         if(day <= 28) {
             return "Yes"
