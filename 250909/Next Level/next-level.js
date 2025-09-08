@@ -17,6 +17,6 @@ class User {
 let user1 = new User()
 
 console.log(`user ${user1.id} lv ${user1.level}`)
-user1.id = "hello"
-user1.level = 28
+user1.id = user_id
+user1.level = level
 console.log(`user ${user1.id} lv ${user1.level}`)
