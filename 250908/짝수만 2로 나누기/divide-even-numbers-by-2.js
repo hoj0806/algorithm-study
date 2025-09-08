@@ -6,7 +6,13 @@ let arr = input[1].split(" ").map(Number);
 // Please Write your code here.
 
 function solution(arr) {
-    console.log(arr.map((i) => i % 2 === 0 ? i/=2 : i).join(" "))
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] % 2 === 0) {
+            arr[i] /= 2;
+        }
+    }
 }
 
 solution(arr)
+
+console.log(arr.join(" "))
