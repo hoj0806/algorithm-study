@@ -10,7 +10,7 @@ nums.sort((a, b) => a - b)
 
 let arr = []
 for(let i = 0; i < nums.length; i++) {
-    if(arr.length === nums.length / n) {
+    if(arr.length === n) {
         break
     }
     arr.push(nums[i] + nums[nums.length - 1 - i])
