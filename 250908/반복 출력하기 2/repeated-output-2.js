@@ -11,7 +11,7 @@ function printHelloWorld(n) {
         return
     }
     console.log("HelloWorld")
-    return printHelloWorld(n - 1)
+    printHelloWorld(n - 1)
 }
 
 printHelloWorld(n)
