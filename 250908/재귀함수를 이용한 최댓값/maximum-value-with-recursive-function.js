@@ -5,19 +5,12 @@ const arr = input[1].split(" ").map(Number);
 
 // Please Write your code here.
 
-let max = 0
 
 function findMaValue(n) {
-    if(n < 0) {
-        return
-    }
+    if(n === 0) return arr[0]
 
-    if(arr[n-1] > max) {
-        max = arr[n-1]
-    }
-
-    findMaValue(n-1)
+    return Math.max(findMaValue(n -1), arr[n])
 }
 
-findMaValue(n)
-console.log(max)
+
+console.log(findMaValue(n-1))
