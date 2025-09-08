@@ -3,17 +3,16 @@ const input = fs.readFileSync(0).toString().trim().split('\n');
 let n = Number(input[0]);
 // Please Write your code here.
 
-let start = 1
-function printStar(start) {
-    if(start > n) {
+function printStar(n) {
+    if(n === 0) {
         return
     }
-    for(let i = 1; i <= start; i++) {
+
+    printStar(n-1)
+    for(let i = 0; i < n; i++) {
         process.stdout.write("*")
-    }
-    process.stdout.write('\n')
-    start+=1
-    printStar(start)
+    } 
+    process.stdout.write("\n")
 }
 
-printStar(start)
+printStar(n)
