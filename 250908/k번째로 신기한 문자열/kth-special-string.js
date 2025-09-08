@@ -11,7 +11,7 @@ let arr = []
 
 for(let i = 0; i < input.length; i++) {
     let str = input[i]
-    if(str.slice(0, 2) === t) {
+    if(str.slice(0, t.length) === t) {
         arr.push(str)
     }
 }
