@@ -26,7 +26,7 @@ students.slice().sort((a, b) => {
     else if(a.name < b.name) return -1
     else return 0
 }).forEach((s) => {
-    console.log(s.name, s.height, s.weight)
+    console.log(s.name, s.height, s.weight.toFixed(1))
 })
 console.log()
 
@@ -34,5 +34,5 @@ console.log("height")
 students.slice().sort((a, b) => {
     return b.height - a.height
 }).forEach((s) => {
-    console.log(s.name, s.height, s.weight)
+    console.log(s.name, s.height, s.weight.toFixed(1))
 })
