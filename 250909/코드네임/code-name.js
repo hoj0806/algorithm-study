@@ -26,7 +26,7 @@ for(let i = 0; i < arr.length; i++) {
 }
 
 arr.sort((a, b) => {
-    a.score - b.score
+    return a.score - b.score
 })
 
 console.log(arr[0].code, arr[0].score)
