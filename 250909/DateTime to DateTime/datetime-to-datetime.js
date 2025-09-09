@@ -9,6 +9,8 @@ let answer = 0
 
 if(A < 11) {
     console.log(-1)
+} else if(A === 11 && B < 11) {
+    console.log(-1)
 } else {
      if(A !== 11) {
         answer += (A - 11) * 1440
