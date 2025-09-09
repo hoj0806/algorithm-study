@@ -14,4 +14,4 @@ while(true) {
     n = parseInt(n / b)
 }
 
-console.log(arr)
+console.log(arr.reverse().join(""))
