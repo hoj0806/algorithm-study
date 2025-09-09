@@ -5,14 +5,9 @@ const [A, B, C] = input[0].split(' ').map(Number);
 
 // Please write your code here.
 
-
 let answer = 0
 
 if(A < 11) {
-    console.log(-1)
-} else if(B < 11) {
-    console.log(-1)
-} else if(C < 11) {
     console.log(-1)
 } else {
      if(A !== 11) {
