@@ -14,4 +14,16 @@ for(let i = 0; i < binaryInput.length; i++) {
     }
 }
 
-console.log(t)
+t*=17
+let arr = []
+
+while(true) {
+    if(t < 2) {
+        arr.push(t)
+        break
+    }
+    arr.push(t % 2)
+    t = parseInt(t / 2)
+}
+
+console.log(arr.reverse().join(""))
