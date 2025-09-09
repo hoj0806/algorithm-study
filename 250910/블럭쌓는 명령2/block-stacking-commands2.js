@@ -7,10 +7,12 @@ const segments = input.slice(1, k + 1).map(line => line.split(' ').map(Number));
 
 let arr = Array(n).fill(0)
 
-console.log(arr)
-
 for(let i = 0; i < segments.length; i++) {
-    console.log(segments[i])
-    let [start, end] = segments[i].split("").map((i) => i - 1)
-    console.log(start, end)
+    let [start, end] = segments[i]
+    for(let j = start-1; j <= end-1; j++) {
+        arr[j]++
+        
+    }
 }
+
+console.log(arr.sort((a, b) => b - a)[0])
