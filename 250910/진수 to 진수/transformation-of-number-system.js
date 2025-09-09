@@ -5,14 +5,7 @@ const n = input[1];
 // Please Write your code here.
 
 
-function translate10(a, b) {
-    let answer = 0
-    let arr = String(a).split(" ")
-    for(let i = 0; i < arr.length; i++) {
-        answer = answer * b + Number(arr[i])
-    }
-    console.log(answer)
-    return answer
-}
+let sum = 0
 
-translate10(11, 8)
+let arr = n.split(" ").map(Number)
+console.log(arr)
