@@ -11,7 +11,7 @@ while(true) {
         break
     }
     arr.push(n % b)
-    n = parseInt(n / 2)
+    n = parseInt(n / b)
 }
 
 console.log(arr)
