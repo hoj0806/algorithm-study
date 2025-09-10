@@ -11,16 +11,19 @@ let startIndex = 1500
 
 for(let i = 0; i< commands.length; i++) {
     let [n, c] = commands[i].split(" ")
+   
     if(c === 'R') {
         for(let i = startIndex; i <= startIndex + Number(n) - 1; i++) {
                 segments[i]++
+               
         }
         startIndex+=Number(n) 
     } else {
         for(let i = startIndex; i >= startIndex - Number(n) + 1; i--) {
             segments[i]++
+           
         }
-        startIndex-=Number(n)
+        startIndex-=Number(n) 
     }
 }
 
