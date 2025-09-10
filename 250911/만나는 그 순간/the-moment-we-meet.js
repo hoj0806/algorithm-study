@@ -58,5 +58,9 @@ for(let i = 1; i < x.length; i++) {
         console.log(i)
         break
     }
+    if(i === x.length - 1) {
+        console.log(-1)
+    }
 }
+
 
