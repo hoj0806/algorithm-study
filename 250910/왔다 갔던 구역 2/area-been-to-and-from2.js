@@ -15,11 +15,10 @@ for(let i = 0; i< commands.length; i++) {
         for(let i = startIndex; i <= startIndex + Number(n) - 1; i++) {
                 segments[i]++
         }
-        startIndex+=Number(n)
+        startIndex+=Number(n) 
     } else {
         for(let i = startIndex; i >= startIndex - Number(n) + 1; i--) {
             segments[i]++
-            
         }
         startIndex-=Number(n)
     }
