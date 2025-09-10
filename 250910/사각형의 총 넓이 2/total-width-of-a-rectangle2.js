@@ -10,7 +10,7 @@ let sum = 0
 let xy = []
 
 for(let i = 0; i < rects.length; i++) {
-    let [x1, y1, x2, y2] = rects[i]
+    let [x1, y1, x2, y2] = rects[i].map((i) => i + 100)
     for(let i = x1; i <= x2 - 1; i++) {
         for(let j = y1; j <= y2 - 1; j++) {
             let str = String(i) + String(j)
