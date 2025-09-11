@@ -7,7 +7,7 @@ const penalizedPersons = input.slice(1, m + 1).map(Number);
 // Please Write your code here.
 
 let arr = Array(n + 1).fill(0)
-let end = false
+
 for(let i = 0; i < penalizedPersons.length; i++) {
     arr[penalizedPersons[i]]++
     if(Math.max(...arr) === k) {
