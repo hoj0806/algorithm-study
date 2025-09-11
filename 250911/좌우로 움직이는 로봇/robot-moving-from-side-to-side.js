@@ -46,12 +46,13 @@ for(let i = 0; i < movesB.length; i++) {
     }
 }
 
-let answer = []
+let answer = 0
 let isSame = false
+
 for(let i = 1; i < Math.max(aRobot.length, bRobot.length); i++) {
     if(aRobot[i] !== undefined && bRobot[i] !== undefined) {
         if(aRobot[i] === bRobot[i]) {
-            if(isSame === false) answer.push(i)
+            if(isSame === false) answer++
             isSame = true 
         } else {
             isSame = false
@@ -59,14 +60,18 @@ for(let i = 1; i < Math.max(aRobot.length, bRobot.length); i++) {
     } else {
         if(aRobot[i] === undefined) {
             if(aRobot[aRobot.length - 1] === bRobot[i]) {
-                answer.push(i)
+                answer++
             }
         } else {
             if(bRobot[bRobot.length - 1] === aRobot[i]) {
-                answer.push(i)
+                answer++
             }
         }
     }
 }
 
-console.log(answer.length)
+
+if(aRobot[aRobot.length - 1] === bRobot[bRobot.length - 1]) answer--
+
+
+console.log(answer)
