@@ -17,15 +17,15 @@ for (let i = 2; i <= n; i++) {
         answer = 'No'
         break
     } else {
-        if(a1 > b1) {
+        if(a1 < b1) {
             line = [b1, a2].join(" ")
-        } else if(b1 > a1) {
+        } else if(b1 < a1) {
             line = [a1, b2].join(" ")
         } else {
             line = [a1, a2].join(" ")
         }
     }
-
+  
 }
 
 console.log(answer)
