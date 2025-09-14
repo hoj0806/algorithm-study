@@ -9,25 +9,28 @@ const blocks = input.slice(1, n + 1).map(Number);
 let cnt = 0
 while(true) {
     let allSame = true
-   let first = blocks[0]
+   let min = 0
+   let max = 0
     for(let i = 1; i < blocks.length; i++) {
-            if(first !== blocks[i]) {
+            if(blocks[0] !== blocks[i]) {
                 allSame = false
-                break
+            }
+            if(blocks[min] > blocks[i]) {
+                min = i
+            }
+
+            if(blocks[max] < blocks[i]) {
+                max = i
             }
     }
 
     if(allSame === true) {
         break
     }
-    let max = Math.max(...blocks)
-    let min = Math.min(...blocks)
 
-    let maxIndex = blocks.indexOf(max)
-    let minIndex = blocks.indexOf(min)
 
-    blocks[maxIndex]-=1
-    blocks[minIndex]+=1
+    blocks[max]-=1
+    blocks[min]+=1
     cnt++
     
 }
