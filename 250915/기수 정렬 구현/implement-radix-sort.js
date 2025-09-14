@@ -6,14 +6,9 @@ const arr = input[1].split(' ').map(Number);
 
 // Please write your code here.
 
-function getMaxLength(arr) {
-    let strArr = arr.map(String)
-    return strArr.sort((a, b) => b.length - a.length)[0]
-}
 
-function radix_sort(arr) {
-    let maxLength = getMaxLength(arr)
-    for(let pos = 0; pos < maxLength; pos++) {
+function radix_sort(arr, k) {
+    for(let pos = 0; pos < k; pos++) {
         let radix_arr = Array(10).fill(0).map(() => [])
 
         for(let i = 0; i < arr.length; i++) {
@@ -34,4 +29,4 @@ function radix_sort(arr) {
     console.log(arr.join(" "))
 }
 
-radix_sort(arr)
+radix_sort(arr, 6)
