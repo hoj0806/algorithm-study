@@ -14,17 +14,15 @@ function selection_sort(arr) {
         for(let j = i + 1; j < len; j++) {
             if(arr[j] < arr[minimum]) {
                 minimum = j
-            }
-
-            if(minimum !== i) {
+            }           
+        }
+          if(minimum !== i) {
                  let tmp = arr[i]
                  arr[i] = arr[minimum]
                  arr[minimum] = tmp
             }
-           
-        }
     } 
-    console.log(arr)
+    console.log(arr.join(" "))
 }
 
 selection_sort(arr)
