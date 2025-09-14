@@ -9,8 +9,8 @@ const arr = input[1].split(' ').map(Number);
 function selection_sort(arr) {
     let len = arr.length
     for(let i = 0; i < arr.length -1; i++) {
-        for(let j = i + 1; j < arr.length; j++) {
             let minimum = arr[i]
+        for(let j = i + 1; j < arr.length; j++) {
             if(arr[j] < minimum) {
                 minimum = arr[j]
             }
