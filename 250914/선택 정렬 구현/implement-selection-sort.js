@@ -8,20 +8,23 @@ const arr = input[1].split(' ').map(Number);
 
 function selection_sort(arr) {
     let len = arr.length
-    for(let i = 0; i < arr.length -1; i++) {
-        let minimum = arr[i]
+    for(let i = 0; i < len -1; i++) {
+        let minimum = i
 
-        for(let j = i + 1; j < arr.length; j++) {
-            if(arr[j] < minimum) {
-                minimum = arr[j]
+        for(let j = i + 1; j < len; j++) {
+            if(arr[j] < arr[minimum]) {
+                minimum = j
             }
-            let tmp = arr[i]
-            arr[i] = minimum
-            minimum = tmp
-        }
-    }
 
-    console.log(arr)    
+            if(minimum !== i) {
+                 let tmp = arr[i]
+                 arr[i] = arr[minimum]
+                 arr[minimum] = tmp
+            }
+           
+        }
+    } 
+    console.log(arr)
 }
 
 selection_sort(arr)
