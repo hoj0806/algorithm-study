@@ -15,13 +15,13 @@ function selection_sort(arr) {
             if(arr[j] < minimum) {
                 minimum = arr[j]
             }
-            console.log(minimum)
             let tmp = arr[i]
             arr[i] = minimum
-            minimum = arr[i]
+            minimum = tmp
         }
     }
-    console.log(arr)
+
+    console.log(arr)    
 }
 
 selection_sort(arr)
