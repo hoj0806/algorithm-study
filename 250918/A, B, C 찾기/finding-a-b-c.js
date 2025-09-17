@@ -5,7 +5,8 @@ const values = input[0].trim().split(' ').map(Number);
 
 values.sort((a, b) => b - a)
 
-let a = values[0] - values[1]
-let b = values[values.length - 3] - a
+let a = values[values.length - 1]
+let b = values[values.length - 2]
 let c = values[0] - a - b
+
 console.log(a, b, c)
