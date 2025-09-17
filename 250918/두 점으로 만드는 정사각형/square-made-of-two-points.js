@@ -11,6 +11,6 @@ let minX = Math.min(x1, x2, a1, a2)
 let maxY = Math.max(y1, y2, b1, b2)
 let minY = Math.min(y1, y2, b1, b2)
 
-let line = Math.max((maxX - minX), (maY - minY))
+let line = Math.max((maxX - minX), (maxY - minY))
 
 console.log(line**2)
