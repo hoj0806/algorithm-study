@@ -12,9 +12,7 @@ for(let i = 0; i < input.length; i++) {
     } 
 }
 
+arr.shift()
 arr.reverse()
-arr.pop()
-
-for(let i = 0; i < arr.length; i++) {
-    console.log(100 - (i * 10) + " - " + arr[i])
-}
+for(let i = )
+console.log(arr)
