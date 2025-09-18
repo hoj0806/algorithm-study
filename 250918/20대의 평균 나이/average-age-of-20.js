@@ -5,7 +5,7 @@ let sum = 0
 
 for(let i = 0; i < input.length; i++) {
     let age = input[i]
-    if(age >= 30 && age < 20) {
+    if(age >= 30 || age < 20) {
         console.log((sum / (i)).toFixed(2))
         break
     } else {
