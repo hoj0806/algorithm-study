@@ -13,7 +13,7 @@ for(let i = 0; i < input.length; i++) {
     }
 
     if(i === input.length - 1) {
-        console.log((sum / (i + 1)).toFixed(2))
+        console.log((sum / (i - 1)).toFixed(2))
     }
 }
 
