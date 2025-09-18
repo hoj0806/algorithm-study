@@ -1,18 +1,15 @@
 const fs = require('fs')
 const input = fs.readFileSync(0).toString().trim().split('\n').map(Number)
 
-let idx = 0
 let sum = 0
 
-while(true) {
-    let age = input[idx]
-
+for(let i = 0; i < input.length; i++) {
+    let age = input[i]
     if(age >= 30) {
-        break
+        console.log((sum / (i)).toFixed(2))
     } else {
-         idx++
-        sum+=age    
+         sum+=age
     }
 }
 
-console.log((sum / idx).toFixed(2))
+
