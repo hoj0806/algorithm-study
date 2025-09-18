@@ -14,5 +14,5 @@ for(let i = 0; i < input.length; i++) {
 
 arr.shift()
 arr.reverse()
-for(let i = )
+
 console.log(arr)
