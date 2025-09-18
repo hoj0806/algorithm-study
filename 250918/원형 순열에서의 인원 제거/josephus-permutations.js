@@ -12,12 +12,11 @@ class Queue {
     }
 
     push(item) {
-        this.tail = (this.tail + 1) & MAX_SIZE
-        this.q[this.tail] = item
-        console.log(this.tail)
+        this.tail = (this.tail + 1) % MAX_SIZE
+        this.q[this.tail] = item 
     }
     pop() {
-        this.head = (this.head + 1) & MAX_SIZE
+        this.head = (this.head + 1) % MAX_SIZE
         return this.q[this.head]
     }
 
@@ -26,7 +25,7 @@ class Queue {
     }
 
     size() {
-        return (this.tail - this.head + MAX_SIZE) & MAX_SIZE
+        return (this.tail - this.head + MAX_SIZE) % MAX_SIZE
     }
 }
 
@@ -35,17 +34,18 @@ let queue = new Queue()
 for(let i = 1; i <= n; i++) {
     queue.push(i)
 }
-console.log(queue)
 
-// while(true) {
-//     if(queue.size() === 1) {
-//         console.log(queue.pop())
-//         break
-//     }
 
-//     for(let i = 1; i < k; i++) {
-//         queue.push(queue.front())
-//         queue.pop()
-//     }
-//     queue.pop()
-// }
+
+while(true) {
+    if(queue.size() === 1) {
+        console.log(queue.pop())
+        break
+    }
+
+    for(let i = 1; i < k; i++) {
+        queue.push(queue.front())
+        queue.pop()
+    }
+    process.stdout.write(queue.pop() + " ")
+}
