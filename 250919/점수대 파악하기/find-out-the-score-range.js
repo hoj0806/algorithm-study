@@ -5,6 +5,9 @@ let arr = Array(11).fill(0)
 
 for(let i = 0; i < input.length; i++) {
     let score = input[i]
+    if(score === 0) {
+        break
+    }
     let n = parseInt(score / 10)
     
     if(score >= 10) {
