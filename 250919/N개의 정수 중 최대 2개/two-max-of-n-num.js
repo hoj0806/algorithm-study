@@ -8,7 +8,7 @@ let maxValue = r[0]
 let next = r[1]
 for(let i = 2; i < r.length; i++) {
    let findMax = false
-   
+
    if(r[i] > maxValue) {
      maxValue = r[i]
      findMax = true
@@ -21,5 +21,5 @@ for(let i = 2; i < r.length; i++) {
 
 }
 
-console.log(maxValue, next)
+console.log(Math.max(maxValue, next), Math.min(maxValue, next))
 
