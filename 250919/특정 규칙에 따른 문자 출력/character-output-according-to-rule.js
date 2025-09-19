@@ -16,7 +16,7 @@ for(let i = 1; i <= n * 2 - 1; i++) {
                 str += "  "
             }
         } else {
-            if(Math.abs(3 - i) + j <= n) {
+            if(Math.abs(n - i) + j <= n) {
                 str += "@ "
             } else {
                 str += "  "
