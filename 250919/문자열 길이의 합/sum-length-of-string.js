@@ -9,7 +9,7 @@ let sum = 0
 for(let i = 1; i <= n; i++) {
     let str = input[i]
     sum += input[i].length
-    if(str.indexOf("a") !== -1) {
+    if(str.indexOf("a") === 0) {
         cnt+=1
     }
 }
