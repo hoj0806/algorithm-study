@@ -6,24 +6,25 @@ const commands = input.slice(1, n + 1);
 
 // Please Write your code here.
 
-let segments = Array(3000).fill(0)
-let startIndex = 1500
+let segment = Array(3000).fill(0)
 
-for(let i = 0; i< commands.length; i++) {
+let idx = 1500
+
+for(let i = 0; i < commands.length; i++) {
     let [n, c] = commands[i].split(" ")
-   
+    n = Number(n)
+
     if(c === 'R') {
-        for(let i = startIndex; i <= startIndex + Number(n) - 1; i++) {
-                segments[i]++
+        for(let j = idx; j <= idx + n - 1; j++) {
+            segment[j]+=1
         }
-            startIndex+=Number(n) 
+        idx+=n
     } else {
-        for(let i = startIndex; i >= startIndex - Number(n) + 1; i--) {
-            segments[i]++
+        for(let j = idx; j >= idx - n + 1; j--) {
+            segment[j]+=1
         }
-        startIndex-=Number(n) 
+        idx-=n
     }
 }
 
-console.log(segments.filter((i) => i > 1).length)
-
+console.log(segment.filter((i) => i > 1).length)
