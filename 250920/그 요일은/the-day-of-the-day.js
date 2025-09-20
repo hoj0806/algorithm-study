@@ -24,4 +24,12 @@ function countDay(m, d) {
 
 let diff = countDay(m2, d2) - countDay(m1, d1)
 
-console.log(diff % 7)
+let week = ["", 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+
+let answer = parseInt(diff / 7)
+
+if(diff % 7 >= week.indexOf(A)) {
+    answer +=1
+} 
+
+console.log(answer)
