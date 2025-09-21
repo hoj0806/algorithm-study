@@ -25,5 +25,5 @@ function dfs(vertex) {
 }
 
 dfs(1)
-
-console.log(visited.filter((i) => i === true).length - 1)
+visited[1] = false
+console.log(visited.filter((i) => i === true).length)
