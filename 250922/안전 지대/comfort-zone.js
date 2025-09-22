@@ -6,7 +6,7 @@ let [n, m] = input[0].split(" ").map(Number)
 let grid = input.slice(1).map(i => i.split(" ").map(Number))
 
 
-let max = [-1, -1];
+let max = [1, 0];
 
 for(let k = 100; k >= 1; k--) {
     let visited = Array(n).fill(false).map(() => Array(m).fill(false))
