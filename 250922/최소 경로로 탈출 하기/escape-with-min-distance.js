@@ -73,4 +73,4 @@ function bfs() {
 let q = new Queue()
 q.push([0, 0, 0])
 bfs()
-console.log(step[n-1][n-1] === 0 ? -1 : step[n-1][n-1])
+console.log(step[n-1][m-1] === 0 ? -1 : step[n-1][m-1])
