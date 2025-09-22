@@ -53,6 +53,8 @@ for(let k = 100; k >= 1; k--) {
     }
     if(cnt > max[1]) {
         max = [k, cnt]
+    } else if(cnt === max[1]) {
+        max = [k, cnt]
     }
 }
 
