@@ -5,6 +5,7 @@ const n = Number(input[0]);
 const grid = input.slice(1, n + 1).map(row => row.split(" ").map(Number));
 // Please write your code here.
 
+let visited = Array(n).fill(false).map(() => Array(n).fill(false))
 
 let breakCount = 0
 let max = 0
@@ -46,7 +47,6 @@ for(let i = 1; i <= 4; i++) {
     }
 
 
-    let visited = Array(n).fill(false).map(() => Array(n).fill(false))
     
     for(let j = 0; j < n; j++) {
         for(let k = 0; k < n; k++) {
