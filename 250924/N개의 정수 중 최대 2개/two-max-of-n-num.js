@@ -12,17 +12,19 @@ for(let i = 0; i < r.length; i++) {
          max = r[i]
         nextMax = r[i]
         findMax = true
-    } else {
-      if(r[i] > max) {
-        max = r[i]
-      }
-      if(r[i] > nextMax && r[i] < max) {
-        nextMax = r[i]
-      }
+    } else if(findMax === true) {
+      console.log("!!!")
+      // if(r[i] > max) {
+      //   max = r[i]
+      // }
+    
+      // if(r[i] > nextMax && r[i] < max) {
+      //   nextMax = r[i]
+      // }
     }
  
   }
-  console.log(max, nextMax)
+
 }
 
 console.log(max, nextMax)
