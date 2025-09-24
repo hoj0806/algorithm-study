@@ -54,12 +54,13 @@ for(let i = 1; i <= 4; i++) {
         for(let k = 0; k < n; k++) {
             if(!visited[j][k] && grid[j][k] === i) {
                 cnt += dfs(j, k, i)
-            }
-        }
-         if(cnt >= 4) {
+                  if(cnt >= 4) {
         breakCount+=1
         }
           max = Math.max(max, cnt)
+            }
+        }
+       
         cnt = 0
     }
      
