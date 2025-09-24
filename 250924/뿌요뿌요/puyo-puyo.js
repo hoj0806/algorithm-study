@@ -10,7 +10,7 @@ let visited = Array(n).fill(false).map(() => Array(n).fill(false))
 let breakCount = 0
 let max = 0
 
-for(let i = 1; i <= 4; i++) {
+for(let i = 1; i <= 100; i++) {
     function isRange(x, y) {
         return 0 <= x && x < n && 0 <= y && y < n
     }
