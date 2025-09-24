@@ -51,7 +51,7 @@ for(let i = 1; i <= 4; i++) {
     for(let j = 0; j < n; j++) {
         for(let k = 0; k < n; k++) {
             if(!visited[j][k] && grid[j][k] === i) {
-                size =  dfs(j, k, i)
+                let size =  dfs(j, k, i)
                   if(size >= 4) {
                         breakCount+=1
                     }
