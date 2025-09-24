@@ -13,11 +13,15 @@ for(let i = 0; i < r.length; i++) {
         nextMax = r[i]
         findMax = true
     } else {
-      nextMax = max
-      max = r[i]
+      if(r[i] > max) {
+        max = r[i]
+      }
+      if(r[i] > nextMax && r[i] < max) {
+        nextMax = r[i]
+      }
     }
  
   }
 }
 
-console.log(max, findMax)
+console.log(max, nextMax)
