@@ -11,7 +11,6 @@ for(let i = 0; i < r.length; i++) {
     if(findMax === false) {
       if(r[i] > max) {
            max = r[i]
-        nextMax = r[i]
         findMax = true
       }
       
