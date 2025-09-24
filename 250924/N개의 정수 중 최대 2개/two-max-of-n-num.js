@@ -22,6 +22,7 @@ for(let i = 0; i < r.length; i++) {
     }
  
   }
+  console.log(max, nextMax)
 }
 
 console.log(max, nextMax)
