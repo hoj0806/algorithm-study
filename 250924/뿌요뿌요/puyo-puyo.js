@@ -10,8 +10,6 @@ let breakCount = 0
 let max = 0
 
 for(let i = 1; i <= 4; i++) {
-    let cnt = 0
-    
     function isRange(x, y) {
         return 0 <= x && x < n && 0 <= y && y < n
     }
@@ -53,15 +51,14 @@ for(let i = 1; i <= 4; i++) {
     for(let j = 0; j < n; j++) {
         for(let k = 0; k < n; k++) {
             if(!visited[j][k] && grid[j][k] === i) {
-                cnt += dfs(j, k, i)
-                  if(cnt >= 4) {
-        breakCount+=1
-        }
-          max = Math.max(max, cnt)
+                size =  dfs(j, k, i)
+                  if(size >= 4) {
+                        breakCount+=1
+                    }
+                  max = Math.max(max, size)
             }
         }
        
-        cnt = 0
     }
      
    
