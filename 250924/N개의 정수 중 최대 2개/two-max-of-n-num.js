@@ -16,12 +16,15 @@ for(let i = 0; i < r.length; i++) {
       
     } else if(findMax === true) {
       if(r[i] > max) {
-        max = r[i]
+         nextMax = max
+         max = r[i]
+      } else {
+          if(r[i] > nextMax && r[i] <= max) {
+            nextMax = r[i]
+          }
       }
     
-      if(r[i] > nextMax && r[i] < max) {
-        nextMax = r[i]
-      }
+    
     }
  
   
