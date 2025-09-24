@@ -32,9 +32,9 @@ for(let i = 1; i <= 4; i++) {
         let k = 1
         visited[x][y] = true
         
-        for(let i = 0; i < dx.length; i++) {
-            let newX = x + dx[i]
-            let newY = y + dy[i]
+        for(let p = 0; p < dx.length; p++) {
+            let newX = x + dx[p]
+            let newY = y + dy[p]
     
             if(canGo(newX, newY, z)) {
                 visited[newX][newY] = true
