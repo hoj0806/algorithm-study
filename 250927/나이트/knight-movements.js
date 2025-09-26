@@ -65,5 +65,4 @@ function bfs(x, y, z) {
 }
 
 bfs(r1, c1, 0)
-
-console.log(grid[r2][c2] === 0 ? -1 : grid[r2][c2])
+console.log(visited[r2][c2] === false ? -1 : grid[r2][c2])
