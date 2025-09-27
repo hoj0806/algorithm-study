@@ -27,6 +27,7 @@ class DoublyLinkedList {
         newNode.next = this.head
         this.head.prev = newNode
         this.head = newNode
+        newNode.prev = null
     }
 
     // 원소 맨 뒤로 넣기
@@ -51,8 +52,8 @@ class DoublyLinkedList {
             this.head = temp.next
             temp.next = null
         } else {
-            node.next.prev = node.prev
             node.prev.next = node.next
+            node.next.prev = node.prev
             node.prev = null
             node.next = null
         }
@@ -103,7 +104,7 @@ for(let i = 0; i < commands.length; i++) {
         }
     } else if(c === 'D') {
         if(it !== l.end()) {
-            l.erase(it)
+            it = l.erase(it)
         }
     } else if(c ==='P') {
          l.insert(it, str)
