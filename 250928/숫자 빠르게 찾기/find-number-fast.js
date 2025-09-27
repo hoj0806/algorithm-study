@@ -25,5 +25,5 @@ function binary_search(arr, target) {
 
 
 for(let i = 0; i < queries.length; i++) {
-    console.log(binary_search(arr, queries[i]))
+    console.log(binary_search(numbers, queries[i]))
 }
