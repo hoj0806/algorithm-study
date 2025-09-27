@@ -6,26 +6,7 @@ const arr = input[1].split(' ').map(Number);
 const queries = input[2].split(' ').map(Number);
 
 // Please Write your code here.
-function binary_search(arr,target) {
-    let left = 0
-    let right = arr.length - 1
 
-    while(left <= right) {
-        let mid = Math.floor((left + right) / 2)
-
-        if(arr[mid] === target) {
-            return mid
-        } else {
-            if(arr[mid] > target) {
-                right = mid - 1
-            } else {
-                left = mid + 1
-            }
-        }
-    }
-
-    return -1
-}
 function lower_bound(arr, target) {
     let left = 0
     let right = arr.length
@@ -40,13 +21,11 @@ function lower_bound(arr, target) {
         }
     }
 
-    return left + 1
+    return left
 }
 
 for(let i = 0; i < queries.length; i++) {
-    if(binary_search(arr, queries[i]) === -1) {
-        console.log(-1)
-    } else {
-        console.log(lower_bound(arr, queries[i]))
-    }
+    let idx = lower_bound(arr, queries[i])
+    if(queries[i] === arr[idx]) console.log(idx + 1)
+    else console.log(-1)
 }
