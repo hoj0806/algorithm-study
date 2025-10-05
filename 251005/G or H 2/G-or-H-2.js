@@ -22,7 +22,7 @@ for(let i = 0; i < arr.length; i++) {
             let gCount = s.filter((i) => i === "G").length
             let hCount = s.filter((i) => i === "H").length
             if(s.indexOf(0) === -1 || gCount === hCount) {
-                answer = Math.max(answer, Math.abs(i-j-1))
+                answer = Math.max(answer, Math.abs(i - (j-1)))
             }
         }
     }
