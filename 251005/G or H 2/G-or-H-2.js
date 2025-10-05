@@ -19,13 +19,11 @@ for(let i = 0; i < arr.length; i++) {
         let first = s[0]
         let last = s[s.length - 1]
         if(first !== 0 && last !== 0) {
-            console.log(s)
-            // let gCount = s.filter((i) => i === "G").length
-            // let hCount = s.filter((i) => i === "H").length
-            // if(s.indexOf(0) === -1 || gCount === hCount) {
-            //     console.log(s)
-            //     answer = Math.max(answer, Math.abs(i - (j-1)))
-            // }
+            let gCount = s.filter((i) => i === "G").length
+            let hCount = s.filter((i) => i === "H").length
+            if(gCount === 0 || hCount === 0 || gCount === hCount) {
+                answer = Math.max(answer, Math.abs(i - (j-1)))
+            }
         }
     }
 }
