@@ -13,7 +13,7 @@ for (let i = 0; i < n; i++) {
 
 let max = -1
 
-for(let i = k; i <= arr.length - k; i++) {
+for(let i = k; i < arr.length - k; i++) {
     let s = arr.slice(i-k, i+k+1).reduce((a, c) => a + c, 0)
     max = Math.max(max, s)
 }
