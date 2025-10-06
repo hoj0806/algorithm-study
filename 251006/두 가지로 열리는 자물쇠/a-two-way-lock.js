@@ -7,7 +7,7 @@ const [a2, b2, c2] = input[2].split(' ').map(Number);
 
 // Please Write your code here.
 
-let answer = 0
+let answer = []
 
 function findMin(p1, p2) {
     let x = Math.abs(p1 - p2)
@@ -25,8 +25,12 @@ function isOpen(q,w,e,r,t,y) {
 for(let i = 1; i <= n; i++) {
     for(let j = 1; j <= n; j++) {
         for(let k =1; k <= n; k++) {
-            if(isOpen(i, j, k, a, b, c) || isOpen(i, j, k, a2, b2, c2)) answer++        
+            if(isOpen(i, j, k, a, b, c) || isOpen(i, j, k, a2, b2, c2)) {
+                if(answer.indexOf("" + i + j + k) === -1) {
+                    answer.push("" + i + j + k)
+                }
+            }     
         }
     }
 }
-console.log(answer)
+console.log(answer.length)
