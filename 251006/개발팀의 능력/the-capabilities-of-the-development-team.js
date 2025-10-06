@@ -9,9 +9,8 @@ let answer = 10000
 let sum = abilities.reduce((a, c) => a + c , 0)
 for(let i = 0; i < abilities.length; i++) {
     for(let j = i + 1; j < abilities.length; j++) {
+          let x = abilities[i] + abilities[j]
         for(let k = j + 1; k < abilities.length; k++) {
-
-            let x = abilities[i] + abilities[j]
             let y = abilities[k]
             let z = sum - (x + y)
             if(x !== y && y !== z && x !== z) {
