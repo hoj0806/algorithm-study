@@ -23,4 +23,4 @@ function insertion_sort(arr) {
 }
 
 
-console.log(insertion_sort(arr.join(" ")))
+console.log(insertion_sort(arr).join(" "))
