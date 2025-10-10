@@ -33,8 +33,25 @@ class Queue {
 }
 
 let q = new Queue()
+
 for(let i = 1; i <= n; i++) {
     q.push(i)
 }
 
-console.log(q)
+
+let answer = []
+
+while(true) {
+    if(q.size() === 1) {
+        answer.push(q.pop())
+        break
+    }
+
+    for(let i = 1; i < k; i++) {
+        q.push(q.front())
+        q.pop()
+    }
+    answer.push(q.pop())
+}
+
+console.log(answer.join(" "))
