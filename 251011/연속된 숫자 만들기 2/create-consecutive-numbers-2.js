@@ -7,10 +7,11 @@ const arr = input[0].split(" ").map(Number);
 
 let x = Math.abs(arr[0] - arr[1])
 let y = Math.abs(arr[0] - arr[2])
+let z = Math.abs(arr[1] - arr[2])
 
 if((x === 1 && y === 2) || (x === 2 && y === 1) | (x === 1 && y === 1)) {
     console.log(0)
-} else if(x === 2 || y === 2) {
+} else if(x === 2 || z === 2) {
     console.log(1)
 } else {
     console.log(2)
