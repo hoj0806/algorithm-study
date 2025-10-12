@@ -12,4 +12,4 @@ for(let i = 2; i <= n; i++) {
     else dp[i] = dp[i-2] + dp[i-3]
 }
 
-console.log(dp[n])
+console.log(dp[n] % 10007)
