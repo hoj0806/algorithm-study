@@ -10,7 +10,7 @@ dp[1] = 0;
 
 for (let i = 2; i <= n; i++) { 
     if(i === 2 || i === 3) dp[i] = 1
-    else dp[i] = (dp[i - 2] % 10007)+ (dp[i - 3] % 10007);
+    else dp[i] = (dp[i - 2] + dp[i - 3]) % 10007;
 }
 
-console.log(dp[n] % 10007);
+console.log(dp[n]);
