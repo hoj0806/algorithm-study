@@ -6,8 +6,11 @@ const n = Number(input[0]);
 // Please Write your code here.
 
 let dp = Array(n+1).fill(0)
-dp[0] = 1
-for(let i = 2; i <= n; i++) {
+dp[0] = 1 
+dp[1] = 0 
+dp[2] = 1 
+dp[3] = 1  
+for(let i = 4; i <= n; i++) {
     if(i === 2 || i === 3) dp[i] = 1
     else dp[i] = dp[i-2] + dp[i-3]
 }
