@@ -5,7 +5,7 @@ const n = Number(input[0]);
 const arr = input[1].trim().split(' ').map(Number);
 
 let dp = Array(n).fill(0)
-dp[0] = arr[0]
+dp[0] = 1
 
 for(let i = 1; i < n; i++) {
     let max = 0
