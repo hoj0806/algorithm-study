@@ -11,7 +11,7 @@ for(let i = 1; i < n; i++) {
     if(a[i] > a[i-1]) {
         dp[i] = dp[i-1] + 1
     } else {
-        let max = -1
+        let max = 0
         for(let j = 0; j < i; j++) {
             if(a[j] < a[i]) max = Math.max(max, dp[j])
         }
