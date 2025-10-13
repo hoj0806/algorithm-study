@@ -18,12 +18,13 @@ for(let i = 0; i < n; i++) {
             dp[i][j] = 0
         } else {
             let max = 0
-            for(x = 0; x < i; x++) {
+            for(let x = 0; x < i; x++) {
                 for(let y = 0; y < j; y++) {
                     if(grid[x][y] < grid[i][j]) max = Math.max(max, dp[x][y])
                 }
             }
-            dp[i][j] = max + 1
+           if(max === 0) dp[i][j] = 0
+           else  dp[i][j] = max + 1
         }
     }
 }
