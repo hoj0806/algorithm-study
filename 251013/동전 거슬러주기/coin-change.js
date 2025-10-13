@@ -10,7 +10,11 @@ for(let i = 1; i <= m; i++) {
     let min = Infinity
     for(let j = 0; j < coins.length; j++) {
         let c = coins[j]
-        if(i >= c) min = Math.min(min, dp[i-c])
+        if(i >= c) {
+            if(dp[i-c] !== -1) {
+                min = Math.min(min, dp[i-c])
+            }
+        }
     }
 
     if(min === Infinity) dp[i] = -1
