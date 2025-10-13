@@ -13,10 +13,10 @@ for(let i = 1; i < n; i++) {
     } else {
         let max = -1
         for(let j = 0; j < i; j++) {
-            max = Math.max(max, dp[j])
+            if(a[j] < a[i]) max = Math.max(max, dp[j])
         }
-        dp[i] = max
+        dp[i] = max + 1
     }
 }
 
-console.log(dp[n-1])
+console.log(Math.max(...dp))
