@@ -15,15 +15,11 @@ let dp = Array(n+1).fill(0).map(() => Array(m+1).fill(0))
 for(let i = 1; i <= n; i++) {
     for(let j = 1; j <= m; j++) {
         let [weight, value] = jewels[i-1]
-        if(i === 1) {
-            if(weight <= j) dp[i][j] = value
-        } else {
             if(j >= weight) {
                 dp[i][j] = Math.max(dp[i-1][j-weight] + value, dp[i-1][j]) 
             } else {
                 dp[i][j] = dp[i-1][j]
             }
-        }
     }
 }
 
