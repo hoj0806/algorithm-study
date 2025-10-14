@@ -11,15 +11,19 @@ dp[0] = 0
 
 
 
-for(let i = 1; i <= n; i++) {
+for(let i = 1; i <= m; i++) {
     let max = -1
     for(let j = 0; j < coin.length; j++) {
         let c = coin[j]
-      
-        if(c <= i) max = Math.max(max, dp[c-i])
+        if(c <= i) max = Math.max(max, dp[i-c])
     }
 
-    dp[i] = max
+    if(max === -1) {
+        dp[i] = -1
+    } else {
+        dp[i] = max + 1
+    }
+    
 }
 
-console.log(dp)
+console.log(dp[m])
