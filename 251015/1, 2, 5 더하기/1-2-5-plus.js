@@ -10,9 +10,10 @@ dp[1] = 1
 dp[2] = 2
 dp[3] = 3
 dp[4] = 5
+dp[5] = 9
 
-for(let i = 5; i <= n; i++) {
-    dp[i] = (dp[i-1] + dp[i-2] + dp[i-3] - dp[i-4]) % 10007
+for(let i = 6; i <= n; i++) {
+    dp[i] = (dp[i-1] + dp[i-2] + (i - 5)) % 10007
 }
 
 console.log(dp[n])
