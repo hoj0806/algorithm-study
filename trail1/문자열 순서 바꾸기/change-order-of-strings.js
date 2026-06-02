@@ -1,6 +1,9 @@
 const fs = require('fs')
 let s = fs.readFileSync(0).toString().trim().split('\n')
 
-console.log(s[1])
+let [a, b] = s;
 
-console.log(s[0])
+[a, b] = [b, a];
+
+console.log(a);
+console.log(b);
