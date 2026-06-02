@@ -1,4 +1,6 @@
 const fs = require('fs')
 let input = fs.readFileSync(0).toString().trim()
 
-console.log(Number(input) * 2)
+let n = Number(input)
+
+console.log(n *= 2)
