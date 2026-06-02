@@ -1,12 +1,10 @@
-// 변수 선언, 입력
-const fs = require("fs");
-let input = fs.readFileSync(0).toString().split(" ");
+const fs = require('fs')
+const p = fs.readFileSync(0).toString().trim().split(' ').map(Number)
 
-let a = Number(input[0]);
-let b = Number(input[1]);
 
-// 값 교체
+
+let [a, b] = p;
+
 [a, b] = [b, a];
 
-// 출력
-console.log(a, b);
+console.log(a, b)
