@@ -1,47 +1,25 @@
+// 변수 선언 및 입력
 const fs = require("fs");
-const input = fs.readFileSync(0).toString().trim().split('\n');
-const n = Number(input[0]);
+let n = Number(fs.readFileSync(0).toString().trim());
 
-// Please Write your code here.
-let s = 0
-let str = ''
-let str2 = ''
-function solution() {
-    if (s >= n) {
-        return
-    }
-
-    s += 1
-    str += s + " "
-    solution(s + 1)
-}
-
-function solution2(n) {
+function printNumber1(n) {
     if (n === 0) {
-        return
+        return;
     }
 
-    str2 += n + " "
-    solution2(n - 1)
-
+    printNumber1(n - 1);
+    process.stdout.write(n + " ");
 }
-solution()
-solution2(n)
 
-console.log(str)
-console.log(str2)
+function printNumber2(n) {
+    if (n === 0) {
+        return;
+    }
 
-// function solution2(n) {
-//     if (n === 0) {
-//         return
-//     }
+    process.stdout.write(n + " ");
+    printNumber2(n - 1);
+}
 
-//     str2 += n + " "
-//     solution(n - 1)
-// }
-
-// solution(s)
-// solution2(n)
-
-// // console.log(str)
-// console.log(str2)
+printNumber1(n);
+console.log();
+printNumber2(n);
