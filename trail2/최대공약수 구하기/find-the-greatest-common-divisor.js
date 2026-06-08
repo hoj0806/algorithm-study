@@ -6,22 +6,12 @@ let m = Number(input[1]);
 
 
 function gcd(a, b) {
-    let max = 0
-    let min = 0
-
-    if (a >= b) {
-        max = a
-        min = b
-    } else {
-        max = b
-        min = a
-    }
 
     let g = 0
-  
-    for (let i = 1; i <= max; i++) {
-        if (max % i === 0 && min % i === 0 && i <= max && i <= min) {
-            if (i > g) g = i
+
+    for (let i = 1; i <= Math.min(a, b); i++) {
+        if (a % i === 0 && b % i === 0) {
+            g = i
         }
     }
     console.log(g)
