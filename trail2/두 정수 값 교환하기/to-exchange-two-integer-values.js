@@ -5,7 +5,9 @@ const [n, m] = input[0].split(" ").map(Number);
 
 function swap(a, b) {
     [a, b] = [b, a]
-    console.log(a, b)
+    return [a, b]
 }
 
-swap(n, m)
+[a, b] = swap(n, m)
+
+console.log(a, b)
