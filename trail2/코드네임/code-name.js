@@ -24,6 +24,6 @@ let arr = []
 for (let i = 0; i < 5; i++) {
     arr.push(new P(codenames[i], scores[i]))
 }
-
 let z = arr.sort((a, b) => a.b - b.b)
+
 console.log(z[0].a, z[0].b)
