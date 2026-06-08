@@ -23,3 +23,4 @@ function printNumber2(n) {
 printNumber1(n);
 console.log();
 printNumber2(n);
+
