@@ -11,4 +11,4 @@ for (let i = 0; i < Number(n); i++) {
 
 let result = words.filter((i) => i.indexOf(t) === 0).sort()
 
-console.log(result[Number(k) - 1])
+console.log(result[k- 1])
