@@ -5,16 +5,13 @@ const arr = input[1].split(" ").map(Number);
 
 // Please Write your code here.
 
-let max = -1
 
-function solution(n) {
-    if (n === -1) {
-        return 
+function solution(z) {
+    if (z === 0) {
+        return arr[0]
     }
-    if (arr[n] > max) max = arr[n]
-    solution(n - 1)
+
+    return Math.max(solution(z - 1), arr[z]);
 }
 
-solution(n - 1)
-
-console.log(max)
+console.log(solution(n - 1))
