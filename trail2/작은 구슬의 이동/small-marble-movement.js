@@ -18,8 +18,8 @@ let y = c - 1
 
 function isRange(x, y) {
     return x >= 0 && x < n && y >= 0 && y < n
-} 
-    
+}
+
 
 const mapper = {
     'R': 0,
@@ -38,14 +38,13 @@ while (true) {
     let nextY = y + dy[dirNum]
 
     if (isRange(nextX, nextY)) {
-        x += dx[dirNum]
-        y += dy[dirNum]
-        second++
+        x = nextX
+        y =nextY
     } else {
         dirNum = 3 - dirNum
-        second++
     }
-   
+
+        second++
 }
 
 console.log(x + 1, y + 1)
