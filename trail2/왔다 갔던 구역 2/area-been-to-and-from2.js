@@ -14,24 +14,23 @@ for (let i = 0; i < commands.length; i++) {
     let [n, c] = commands[i].split(" ")
     n = Number(n)
     if (c === "R") {
-        for (let j = p; j < p + n; j++) {
-            arr[j] += 1
-        }
-
+        arr[p] += 1
+        arr[p + n] -= 1
         p += n
     } else {
-        for (let j = p - n; j < p; j++) {
-            arr[j] += 1
-        }
-
+        arr[p - n] += 1
+        arr[p] -= 1
         p -= n
     }
 }
+
+let currentOverlap = 0;
 let cnt = 0
-arr.forEach((i) => {
-    if (i >= 2) {
+for (let i = 0; i < arr.length; i++) {
+    currentOverlap += arr[i]
+    if (currentOverlap >= 2 ) {
         cnt++
     }
-})
+}
 
 console.log(cnt)
