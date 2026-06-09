@@ -20,7 +20,7 @@ let answer = -1
 for (let i = 0; i < penalizedPersons.length; i++) {
     let p = penalizedPersons[i]
     arr[p - 1] += 1
-    if (check(arr, k)) {
+    if (arr[p - 1] >= k) {
         answer = p
         break
     }
