@@ -14,9 +14,7 @@ function isRange(x, y) {
 
 for (let i = 0; i < arr.length; i++) {
     for (let j = 0; j < arr.length; j++) {
-        let str = ''
-        let spell = arr[i][j]
-        str += spell
+        let str = arr[i][j]
         for (let k = 0; k < dx.length; k++) {
             let nx = i
             let ny = j
