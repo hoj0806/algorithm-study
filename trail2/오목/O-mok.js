@@ -31,15 +31,7 @@ for (let i = 0; i < arr.length; i++) {
             }
             if (str === "11111" || str === "22222") {
                 console.log(str[0])
-                if (direction === 0) {
-                    console.log(i + 1, j + 3)
-                } else if (direction === 2) {
-                    console.log(i + 3, j + 1)
-                } else if (direction === 1) {
-                    console.log(i + 3, j + 3)
-                } else if (direction === 3) {
-                    console.log(i + 3, j - 1)
-                }
+                console.log((i + dx[k] * 2) + 1, (j + dy[k] * 2) + 1);
                 return
             }
             str = arr[i][j]
