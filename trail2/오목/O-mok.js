@@ -11,7 +11,6 @@ let dy = [1, 1, 0, -1, -1, -1, 0, 1]
 function isRange(x, y) {
     return 0 <= x && x < 19 && 0 <= y && y < 19
 }
-let direction = 0
 
 for (let i = 0; i < arr.length; i++) {
     for (let j = 0; j < arr.length; j++) {
@@ -26,7 +25,6 @@ for (let i = 0; i < arr.length; i++) {
                     nx += dx[k]
                     ny += dy[k]
                     str += arr[nx][ny]
-                    direction = k
                 }
             }
             if (str === "11111" || str === "22222") {
