@@ -20,7 +20,7 @@ for (let i = 0; i < n; i++) {
             arr[k] = 1
         }
     }
-    max = Math.max(max, arr.reduce((a, c) => a + c, 0))
+   max = Math.max(max, arr.filter(v => v === 1).length)
 }
 
 console.log(max)
