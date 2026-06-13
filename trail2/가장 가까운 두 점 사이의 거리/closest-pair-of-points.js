@@ -13,7 +13,7 @@ for (let i = 0; i < n; i++) {
     for (let j = i + 1; j < n; j++) {
         let [x2, y2] = points[j]
         min = Math.min(min,
-            (Math.abs(x2 - x1) ** 2) + (Math.abs(y2 - y1) ** 2)
+            ((x2 - x1) ** 2) + ((y2 - y1) ** 2)
         )
 
     }
