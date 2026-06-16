@@ -22,7 +22,7 @@ for (let i = 0; i < k; i++) {
     for (let j = 0; j < n; j++) {
         for (let k = j + 1; k < n; k++) {
             let s = row[k] + "," + row[j]
-            list = list.filter((i) => i !== s)
+            list = list.filter((item) => item !== s)
         }
     }
 }
