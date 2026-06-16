@@ -10,7 +10,7 @@ let max = -1
 
 for (let i = 0; i <= n; i++) {
     let sum = a * i
-    for (j = 0; j <= n; j++) {
+    for (let j = 0; j <= n; j++) {
         sum += b * j
         if (sum <= c) {
             max = Math.max(sum, max)
