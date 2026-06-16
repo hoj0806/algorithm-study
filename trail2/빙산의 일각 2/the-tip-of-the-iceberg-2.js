@@ -25,8 +25,9 @@ for (let i = 1; i <= maxHeight; i++) {
                 cnt++
             }
         }
-        max = Math.max(max, cnt)
+
     }
+    max = Math.max(max, cnt)
 }
 
 console.log(max)
