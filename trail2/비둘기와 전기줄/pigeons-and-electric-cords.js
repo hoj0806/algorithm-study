@@ -9,8 +9,6 @@ const movements = input.slice(1, n + 1).map(line => line.split(' ').map(Number))
 let answer = 0
 for (let i = 1; i <= 10; i++) {
     let cnt = 0
-    let left = []
-    let right = []
     let p = ''
     for (let j = 0; j < movements.length; j++) {
         let [number, position] = movements[j]
