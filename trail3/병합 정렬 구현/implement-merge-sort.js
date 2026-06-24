@@ -6,33 +6,24 @@ const arr = input[1].trim().split(' ').map(Number);
 
 // Please Write your code here.
 
-
-function merge_sort(arr) {
+function quick_sort(arr) {
     if (arr.length <= 1) return arr
 
-    const mid = Math.floor(arr.length / 2)
-    const left = arr.slice(0, mid)
-    const right = arr.slice(mid)
+    let pivot = arr[0]
+    let left = []
+    let right = []
 
-    return merge(merge_sort(left), merge_sort(right))
-}
-
-function merge(left, right) {
-    const result = []
-    let i = 0
-    let j = 0
-
-    while (i < left.length && j < right.length) {
-        if (left[i] < right[j]) {
-            result.push(left[i++])
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] < pivot) {
+            left.push(arr[i])
         } else {
-            result.push(right[j++])
+            right.push(arr[i])
         }
     }
 
-    return result.concat(left.slice(i), right.slice(j))
+    return [...quick_sort(left), pivot, ...quick_sort(right)]
 }
 
-let answer = merge_sort(arr)
+let answer = quick_sort(arr)
 
 console.log(answer.join(" "))
