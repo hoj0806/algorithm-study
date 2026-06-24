@@ -8,28 +8,21 @@ let arr = input[1].split(' ').map(Number);
 
 
 
-for (let i = 1; i <= 6; i++) {
-    let bucket = Array(10).fill(0).map(() => [])
-    let pos = 10 ** (i - 1)
+function radix_sort(arr) {
+    let maxVal = Math.max(...arr)
+    for (let pos = 1; Math.floor(maxVal / pos) > 0; pos *= 10) {
+        const bucket = Array.from({ length: 10 }, () => [])
 
-
-    for (let j = 0; j < n; j++) {
-        bucket[Math.floor(arr[j] / pos) % 10].push(arr[j])
-    }
-
-    let store = []
-
-    for (let p = 0; p < bucket.length; p++) {
-        let row = bucket[p]
-        for (let q = 0; q < row.length; q++) {
-            if (row.length !== 0) {
-                store.push(bucket[p][q])
-            }
+        for (let j = 0; j < arr.length; j++) {
+            const digit = Math.floor(arr[j] / pos) % 10
+            bucket[digit].push(arr[j])
         }
+        arr = bucket.flat()
     }
 
-    arr = store
-
+    return arr
 }
+
+arr = radix_sort(arr)
 
 console.log(arr.join(" "))
