@@ -29,11 +29,10 @@ function check(arr, k) {
     for(let i = 0; i < arr.length - 1; i++) {
         if(arr[i] === arr[i+1]) {
             cnt++
-            max = Math.max(max, cnt)
         } else {
-            max = Math.max(max, cnt)
             cnt = 1
         }
+        max = Math.max(max, cnt)
     }
     return max >= k 
 }
