@@ -12,7 +12,7 @@ let dy = [0, 0, -1, 1]
 let x = currX - 1
 let y = currY - 1
 
-let answer = [grid[x][y]]
+let answer = []
 
 function isRange(x, y) {
   return x >= 0 && x < n && y >= 0 && y < n
@@ -20,14 +20,14 @@ function isRange(x, y) {
 
 while (true) {
   let moved = false
-
+  let point = grid[x][y]
+  answer.push(point)
   for (let i = 0; i < dx.length; i++) {
     let nx = x + dx[i]
     let ny = y + dy[i]
-    if (isRange(nx, ny) && grid[nx][ny] > grid[x][y]) {
+    if (isRange(nx, ny) && grid[nx][ny] > point) {
       x = nx
       y = ny
-      answer.push(grid[x][y])
       moved = true
       break
     }
