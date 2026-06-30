@@ -10,32 +10,27 @@ for (let i = 1; i <= m; i++) {
 // Please Write your code here.
 
 
-
-
-let cnt = 0
+const graph = Array.from(Array(n + 1), () => [])
 let visited = Array(n + 1).fill(false)
-let graph = Array(n + 1).fill(0).map(() => Array(n + 1).fill(0))
 
 for (let i = 0; i < edges.length; i++) {
-    let [x, y] = edges[i]
-    graph[x][y] = 1
-    graph[y][x] = 1
+    const [v1, v2] = edges[i]
+    graph[v1].push(v2)
+    graph[v2].push(v1)
 }
 
 
-
-function dfs_array(vertex) {
-    for (let currV = 1; currV <= n; currV++) {
-        if (graph[vertex][currV] === 1 && !visited[currV]) {
-            cnt++
+function dfs(vertex) {
+    graph[vertex].forEach(currV => {
+        if (!visited[currV]) {
             visited[currV] = true
-            dfs_array(currV)
+            dfs(currV)
         }
-    }
-
+    })
 }
 
 visited[1] = true
-dfs_array(1)
+dfs(1)
 
-console.log(cnt)
+let result = visited.filter(v => v === true).length - 1;
+console.log(result);
