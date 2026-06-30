@@ -8,29 +8,19 @@ const [n, m] = input[0].split(' ').map(Number);
 
 let answer = []
 
-function solution(number) {
-    if (number === m + 1) {
+function solution(currNum, lastNum) {
+    if (currNum === m + 1) {
         console.log(answer.join(" "))
         return
     }
 
-    for (let i = 1; i <= n; i++) {
-        if (answer.length === 0) {
-            answer.push(i)
-            solution(number + 1)
-            answer.pop()
-        }
 
-        if (answer.length > 0 && i > answer[answer.length - 1]) {
-            answer.push(i)
-            solution(number + 1)
-            answer.pop()
-        }
-
+    for (let i = lastNum + 1; i <= n; i++) {
+        answer.push(i)
+        solution(currNum + 1, i)
+        answer.pop()
     }
 }
 
-solution(1)
-
-
+solution(1, 0)
 
