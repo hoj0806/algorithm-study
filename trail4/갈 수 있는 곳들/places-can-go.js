@@ -53,7 +53,7 @@ function bfs() {
     }
 }
 
-for (i = 0; i < startPoints.length; i++) {
+for (let i = 0; i < startPoints.length; i++) {
     let [a, b] = startPoints[i]
     q.push([a - 1, b - 1])
     visited[a - 1][b - 1] = true
