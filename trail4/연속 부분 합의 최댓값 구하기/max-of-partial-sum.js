@@ -16,3 +16,4 @@ dp.shift()
 
 console.log(Math.max(...dp))
 
+
