@@ -14,8 +14,6 @@ for (let i = 1; i <= n; i++) {
 
     for (let j = 0; j < numbers.length; j++) {
         if (i >= numbers[j]) {
-            if (dp[i - numbers[j]] === 0) continue
-
             sum += (dp[i - numbers[j]]) 
         }
     }
