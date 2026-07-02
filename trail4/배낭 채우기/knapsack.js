@@ -16,7 +16,7 @@ for (let i = 1; i <= n; i++) {
     for (let j = 0; j <= m; j++) {
         dp[i][j] = dp[i-1][j]
 
-        if(j >= weight && dp[i-1][j-weight] !== -1) {
+        if(j >= weight) {
             dp[i][j] = Math.max(dp[i-1][j], dp[i-1][j-weight] + value)
         }
     }
