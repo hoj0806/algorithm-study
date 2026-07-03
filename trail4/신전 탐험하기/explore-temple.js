@@ -25,13 +25,5 @@ for (let j = 1; j < n; j++) {
 }
 
 
-let max = -1
 
-for (let i = 0; i < n; i++) {
-    for (let j = 0; j <= 2; j++) {
-        max = Math.max(max, dp[i][j])
-    }
-}
-
-
-console.log(max)
+console.log(Math.max(...dp[n-1]))
