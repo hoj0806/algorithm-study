@@ -14,23 +14,19 @@ for (let i = 0; i < t; i++) {
         const n = Number(x);
         inputIndex++;
         // Please Write your code here.
-        if(command === 'I') {
+        if (command === 'I') {
             s.push(n)
-        } else if(command === 'D') {
-            if(n === 1) {
-                if(s.findGreatest()) {
-                    s.delete(s.findGreatest().value)
-                }
-            } else if(n === -1) {
-                if(s.findLeast()) {
-                    s.delete(s.findLeast().value)
-                }
+        } else if (command === 'D' && s.length > 0) {
+            if (n === 1) {
+                s.delete(s.findGreatest().value)
+            } else if (n === -1) {
+                s.delete(s.findLeast().value)
             }
         }
     }
 
-    if(s.findGreatest()) {
-        console.log(s.max(), s.min())
+    if (s.length > 0) {
+        console.log(s.findGreatest().value, s.findLeast().value)
     } else {
         console.log("EMPTY")
     }
