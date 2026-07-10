@@ -30,7 +30,7 @@ for (let i = 0; i < t; i++) {
     }
 
     if(s.findGreatest()) {
-        console.log(s.findGreatest().value, s.findLeast().value)
+        console.log(s.max(), s.min())
     } else {
         console.log("EMPTY")
     }
