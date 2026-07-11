@@ -17,7 +17,7 @@ function isSubsequence(target, source) {
             i++
         }
 
-        if (i === source.length) return true
+        if (i === target.length) return true
         j++
     }
 
