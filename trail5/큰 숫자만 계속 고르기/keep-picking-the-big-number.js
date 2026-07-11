@@ -15,8 +15,7 @@ for (let i = 0; i < n; i++) {
 
 
 for (let i = 1; i <= m; i++) {
-    let top = pq.peek()
-    pq.delete(top)
+    let top = pq.pop()
     pq.push(top-1)
 }
 
