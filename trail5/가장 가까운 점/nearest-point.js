@@ -15,10 +15,14 @@ class Pair {
 }
 
 const pq = new Heap(null, null, (a, b) => {
-    if ((b.x + b.y) === (a.x + a.y)) {
-        return a.y - b.y
-    } else {
+    if ((a.x + a.y) !== (b.x + b.y)) {
         return (b.x + b.y) - (a.x + a.y)
+    } else {
+        if (a.x === b.x) {
+            return b.y - a.y
+        } else {
+            return b.x - a.x
+        }
     }
 });
 
