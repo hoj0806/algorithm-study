@@ -8,18 +8,16 @@ const arr = input.slice(1, 1 + n).map(Number);
 // Please Write your code here.
 
 const pq = new Heap();
-for (let i = 0; i < n; i++) {
-    let num = arr[i]
+
+
+arr.forEach(num => {
     if (num === 0) {
         if (pq.length === 0) {
             console.log(0)
         } else {
-            let top = pq.peek()
-            console.log(-top)
-            pq.delete(top)
-
+            console.log(-pq.pop())
         }
     } else {
         pq.push(-num)
     }
-}
+})
