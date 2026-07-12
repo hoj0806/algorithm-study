@@ -14,15 +14,9 @@ arr.sort((a, b) => a[0] - b[0])
 let max = 0
 let sum = 0
 
-let hash = {}
 
 for (let i = 0; i < arr.length; i++) {
-    let [_, y] = arr[i]
-    if (y === 1) {
-        sum += 1
-    } else if (y === -1) {
-        sum -= 1
-    }
+    sum += arr[i][1]
     max = Math.max(max, sum)
 }
 
