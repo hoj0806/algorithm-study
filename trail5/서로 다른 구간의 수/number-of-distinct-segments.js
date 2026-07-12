@@ -15,7 +15,7 @@ let sArr = arr.sort((a, b) => a[0] - b[0])
 let ans = 0
 
 for (let i = 0; i < sArr.length; i++) {
-    let [x, y, index] = sArr[i]
+    let [_, y, index] = sArr[i]
 
     if (y === 1) {
         if (set.size === 0) {
