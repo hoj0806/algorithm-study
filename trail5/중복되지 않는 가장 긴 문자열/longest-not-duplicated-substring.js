@@ -7,7 +7,7 @@ const n = word.length;
 // Please Write your code here.
 
 
-let arr = Array(1000).fill(0)
+let arr = Array(200).fill(0)
 
 let j = 0
 let max = -1
