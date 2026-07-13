@@ -16,7 +16,7 @@ function lower_bound(arr, target) {
     while (left <= right) {
         let mid = (left + right) >> 1
         if (arr[mid] >= target) {
-            min_idx = Math.min(min_idx, mid)
+            min_idx = mid
             right = mid - 1
         } else {
             left = mid + 1
@@ -34,7 +34,7 @@ function upper_bound(arr, target) {
     while (left <= right) {
         let mid = (left + right) >> 1
         if (arr[mid] > target) {
-            min_idx = Math.min(min_idx, mid)
+            min_idx = mid
             right = mid - 1
         } else {
             left = mid + 1
