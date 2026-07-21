@@ -22,7 +22,8 @@ while (true) {
     let max = -1
     let find = -1
 
-    if (idx <= 0) break
+    if (idx < 0) break
+
 
     for (let i = idx; i >= 0; i--) {
         if (arr[i] >= max) {
@@ -34,6 +35,5 @@ while (true) {
     idx = find - 1
 }
 
-if (idx === 0) answer.push(1)
 
 console.log(answer.join(" "))
