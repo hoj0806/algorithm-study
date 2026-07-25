@@ -4,21 +4,12 @@ const n = Number(input[0]);
 // Please Write your code here.
 
 
-let cnt = 0
-
 function solution(n) {
     if (n === 1) {
-        return
+        return 0
     }
 
-    if (n % 2 === 0) {
-        solution(n / 2)
-        cnt++
-    } else {
-        solution(parseInt(n / 3))
-        cnt++
-    }
+    return solution(n % 2 === 0 ? n / 2 : parseInt(n / 3)) + 1
 }
 
-solution(n)
-console.log(cnt)
+console.log(solution(n))
