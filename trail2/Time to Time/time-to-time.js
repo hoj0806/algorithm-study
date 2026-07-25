@@ -4,7 +4,7 @@ const [a, b, c, d] = input[0].split(' ').map(Number);
 // Please Write your code here.
 
 
-let currentTime = (a * 60) + b
-let finishTime = (c * 60) + d
+let hour = c - a
+let minute = d - b
 
-console.log(finishTime - currentTime)
+console.log((hour * 60) + minute)
