@@ -6,17 +6,18 @@ const arr = input.slice(1, n + 1).map(Number);
 
 // Please Write your code here.
 
-let cnt = 0
-let max = 0
-for (let i = 0; i < arr.length; i++) {
-    if (i === 0 || arr[i] !== arr[i - 1]) {
-        cnt = 1
-    } else {
-        cnt++
-    }
 
-    if (cnt > max) {
-        max = cnt
+let max = 0
+let cnt = 0
+
+for (let i = 0; i < n; i++) {
+    if (i === 0 || arr[i] === arr[i - 1]) cnt++
+    else {
+        max = Math.max(max, cnt)
+        cnt = 1
+    }
+    if(i === n - 1) {
+        max = Math.max(max, cnt)
     }
 }
 
