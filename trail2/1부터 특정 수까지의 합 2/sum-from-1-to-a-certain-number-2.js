@@ -5,12 +5,16 @@ const n = Number(input[0]);
 
 // Please Write your code here.
 
+
+
 function solution(n) {
-    if(n === 1) {
+    if (n === 1) {
         return 1
     }
 
     return solution(n - 1) + n
 }
 
-console.log(solution((n)))
+let answer = solution(n)
+
+console.log(answer)
