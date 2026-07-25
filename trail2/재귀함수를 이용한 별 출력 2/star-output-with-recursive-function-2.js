@@ -3,7 +3,7 @@ const input = fs.readFileSync(0).toString().trim().split('\n');
 let n = Number(input[0]);
 // Please Write your code here.
 
-function solution(n) {
+function print(n) {
     if (n === 0) {
         return
     }
@@ -11,12 +11,12 @@ function solution(n) {
     for (let i = 1; i <= n; i++) {
         process.stdout.write("* ")
     }
-    console.log()
-    solution(n - 1)
+    process.stdout.write("\n")
+    print(n - 1)
     for (let i = 1; i <= n; i++) {
         process.stdout.write("* ")
     }
-    console.log()
+    process.stdout.write("\n")
 }
 
-solution(n)
+print(n)
