@@ -13,12 +13,9 @@ let cnt = 0
 for (let i = 0; i < n; i++) {
     if (i === 0 || arr[i] === arr[i - 1]) cnt++
     else {
-        max = Math.max(max, cnt)
         cnt = 1
     }
-    if(i === n - 1) {
-        max = Math.max(max, cnt)
-    }
+    max = Math.max(max, cnt)
 }
 
 console.log(max)
