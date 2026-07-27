@@ -44,13 +44,6 @@ let dirNum = parseInt(startNum / n)
 
 let cnt = 0
 
-
-/* 
-아래 - 0
-왼쪽 - 1
-위 - 2
-오른쪽 - 3
-*/
 while (true) {
     if (!isRange(x, y)) {
         break
