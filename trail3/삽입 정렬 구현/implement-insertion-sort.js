@@ -7,22 +7,19 @@ const arr = input[1].split(' ').map(Number);
 // Please Write your code here.
 
 
-function selection_sort(arr) {
-    let len = arr.length
-
-    for (let i = 0; i < len; i++) {
-        let min = Infinity
-        let minIndex = 0
-        for (let j = i; j < len; j++) {
-            if (min > arr[j]) {
-                min = Math.min(min, arr[j])
-                minIndex = j
-            }
+function insertion_sort(arr) {
+    const len = arr.length
+    for (let i = 1; i < n; i++) {
+        let j = i - 1
+        let key = arr[i]
+        while (j >= 0 && arr[j] > key) {
+            arr[j + 1] = arr[j]
+            j -= 1
         }
-        [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]]
+        arr[j + 1] = key
     }
 }
 
-selection_sort(arr)
+insertion_sort(arr)
 
 console.log(arr.join(" "))
