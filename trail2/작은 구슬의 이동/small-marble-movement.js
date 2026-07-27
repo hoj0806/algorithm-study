@@ -8,44 +8,40 @@ c = Number(c);
 
 // Please Write your code here.
 
-let second = 0
 
 let dx = [0, 1, -1, 0]
 let dy = [1, 0, 0, -1]
+
+const obj = {
+  'R': 0,
+  'D': 1,
+  'U': 2,
+  'L': 3
+}
+
+let time = 0
+let dirNum = obj[d]
 
 let x = r - 1
 let y = c - 1
 
 function isRange(x, y) {
-    return x >= 0 && x < n && y >= 0 && y < n
+  return x >= 0 && x < n && y >= 0 && y < n
 }
 
-
-const mapper = {
-    'R': 0,
-    'D': 1,
-    'U': 2,
-    'L': 3,
-}
-
-let dirNum = mapper[d]
 while (true) {
-    if (second === t) {
-        break
-    }
-
-    let nextX = x + dx[dirNum]
-    let nextY = y + dy[dirNum]
-
-    if (isRange(nextX, nextY)) {
-        x = nextX
-        y =nextY
-    } else {
-        dirNum = 3 - dirNum
-    }
-
-        second++
+  if (time === t) break
+  let newX = x + dx[dirNum]
+  let newY = y + dy[dirNum]
+  time++
+  if (isRange(newX, newY)) {
+    x = newX
+    y = newY
+  } else {
+    dirNum = 3 - dirNum
+  }
 }
 
 console.log(x + 1, y + 1)
+
 
