@@ -11,11 +11,9 @@ function selection_sort(arr) {
     let len = arr.length
 
     for (let i = 0; i < len; i++) {
-        let min = Infinity
-        let minIndex = 0
+        let minIndex = i
         for (let j = i; j < len; j++) {
-            if (min > arr[j]) {
-                min = Math.min(min, arr[j])
+            if (arr[minIndex] > arr[j]) {
                 minIndex = j
             }
         }
