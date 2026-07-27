@@ -8,6 +8,10 @@ const arr = input[1].trim().split(" ").map(Number);
 
 
 function quick_sort(arr, start, end) {
+    if (start >= end) {
+        return;
+    }
+    
     const part2 = partition(arr, start, end)
 
     if (start < part2 - 1) {
