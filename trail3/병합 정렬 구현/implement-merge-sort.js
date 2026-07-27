@@ -28,7 +28,7 @@ function merge(left, right) {
     return [...result, ...left.slice(i), ...right.slice(j)]
 }
 function merge_sort(arr) {
-    if (arr.length === 1) {
+    if (arr.length <= 1) {
         return arr
     }
 
