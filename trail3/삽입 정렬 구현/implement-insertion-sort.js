@@ -6,21 +6,23 @@ const arr = input[1].split(' ').map(Number);
 
 // Please Write your code here.
 
-function insertion_sort(arr) {
-    const len = arr.length
 
-    for (let i = 1; i < len; i++) {
-        let key = arr[i]
-        let j = i - 1
+function selection_sort(arr) {
+    let len = arr.length
 
-        while (j >= 0 && key < arr[j]) {
-            arr[j + 1] = arr[j]
-            j--
+    for (let i = 0; i < len; i++) {
+        let min = Infinity
+        let minIndex = 0
+        for (let j = i; j < len; j++) {
+            if (min > arr[j]) {
+                min = Math.min(min, arr[j])
+                minIndex = j
+            }
         }
-
-        arr[j + 1] = key
+        [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]]
     }
 }
-insertion_sort(arr)
+
+selection_sort(arr)
 
 console.log(arr.join(" "))
