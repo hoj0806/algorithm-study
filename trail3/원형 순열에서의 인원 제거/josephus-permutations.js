@@ -4,52 +4,38 @@ const [n, k] = input[0].split(" ").map(Number);
 // Please Write your code here.
 
 class Queue {
-    constructor(maxSize = 5000) {
+    constructor() {
         this.q = []
-        this.maxSize = maxSize
-        this.head = 0
-        this.tail = 0
-        this.count = 0
+        this.head = -1
+        this.tail = -1
     }
 
-
     push(item) {
-        this.tail = (this.tail + 1) % this.maxSize
-        this.q[this.tail] = item
-        this.count++
+        this.q.push(item)
+        this.tail++
     }
 
     pop() {
-        this.head = (this.head + 1) % this.maxSize
-        this.count--
-        return this.q[this.head]
-    }
-
-    front() {
-        return this.q[(this.head + 1) % this.maxSize]
+        return this.q[++this.head]
     }
 
     size() {
-        return this.count
+        return this.tail - this.head
     }
 }
 
 let q = new Queue()
 
-
 for (let i = 1; i <= n; i++) {
     q.push(i)
 }
 
-let answer = ''
+let answer = []
 while (q.size() !== 0) {
-    for (let i = 1; i < k; i++) {
+    for (let i = 1; i <= k - 1; i++) {
         q.push(q.pop())
     }
-    answer += q.pop() + " "
-
+    answer.push(q.pop())
 }
 
-console.log(answer.trim())
-
-
+console.log(answer.join(" "))
