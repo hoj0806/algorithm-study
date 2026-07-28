@@ -8,16 +8,17 @@ const queries = input.slice(2, 2 + M).map(Number);
 // Please Write your code here.
 
 
-function lower_bound(arr, target) {
+function upper_bound(arr, target) {
     let left = 0
     let right = arr.length - 1
     let min_idx = arr.length
 
     while (left <= right) {
-        let mid = (left + right) >> 1
-        if (arr[mid] >= target) {
-            min_idx = mid
+        let mid = parseInt((left + right) / 2)
+
+        if (arr[mid] > target) {
             right = mid - 1
+            min_idx = Math.min(min_idx, mid)
         } else {
             left = mid + 1
         }
@@ -26,16 +27,17 @@ function lower_bound(arr, target) {
     return min_idx
 }
 
-function upper_bound(arr, target) {
+function lower_bound(arr, target) {
     let left = 0
     let right = arr.length - 1
     let min_idx = arr.length
 
     while (left <= right) {
-        let mid = (left + right) >> 1
-        if (arr[mid] > target) {
-            min_idx = mid
+        let mid = parseInt((left + right) / 2)
+
+        if (arr[mid] >= target) {
             right = mid - 1
+            min_idx = Math.min(min_idx, mid)
         } else {
             left = mid + 1
         }
@@ -47,7 +49,5 @@ function upper_bound(arr, target) {
 
 for (let i = 0; i < M; i++) {
     let q = queries[i]
-    let rightIdx = upper_bound(numbers, q)
-    let leftIdx = lower_bound(numbers, q)
-    console.log(rightIdx - leftIdx)
+    console.log(upper_bound(numbers, q) - lower_bound(numbers, q))
 }
