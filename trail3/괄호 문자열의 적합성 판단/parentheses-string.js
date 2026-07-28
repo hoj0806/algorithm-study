@@ -3,13 +3,12 @@ const input = fs.readFileSync(0).toString().trim().split('\n');
 const bracketStr = input[0];
 // Please write your code here.
 
-
 let stack = []
 
 for (let i = 0; i < bracketStr.length; i++) {
-    let s = bracketStr[i]
-    if (s === "(") {
-        stack.push(s)
+    let b = bracketStr[i]
+    if (b === "(") {
+        stack.push(b)
     } else {
         if (stack.length === 0) {
             console.log("No")
@@ -20,6 +19,4 @@ for (let i = 0; i < bracketStr.length; i++) {
     }
 }
 
-if (stack.length === 0) console.log('Yes')
-else console.log('No')
-
+console.log(stack.length === 0 ? "Yes" : "No")
