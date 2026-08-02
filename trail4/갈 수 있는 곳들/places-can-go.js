@@ -23,45 +23,49 @@ class Queue {
         return this.q[++this.head]
     }
 
+    size() {
+        return this.tail - this.head
+    }
+
     empty() {
-        return this.head === this.tail
+        return this.size() === 0
     }
 }
 
-let visited = Array(n).fill(0).map(() => Array(n).fill(false))
-
 let q = new Queue()
-let dx = [0, 1, 0, -1]
-let dy = [1, 0, -1, 0]
+
 
 function isRange(x, y) {
     return x >= 0 && x < n && y >= 0 && y < n
 }
 
-function bfs() {
+let dx = [0, 1, 0, -1]
+let dy = [1, 0, -1, 0]
+
+let visited = Array(n).fill(false).map(() => Array(n).fill(false))
+
+for (let i = 0; i < k; i++) {
+    let [x, y] = startPoints[i]
+    q.push([x - 1, y - 1])
+}
+
+function BFS() {
     while (!q.empty()) {
-        let curr = q.pop()
-        let [x, y] = curr
+        let currV = q.pop()
+        let [x, y] = currV
+        visited[x][y] = true
         for (let i = 0; i < dx.length; i++) {
-            let newX = x + dx[i]
-            let newY = y + dy[i]
-            if (isRange(newX, newY) && grid[newX][newY] === 0 && !visited[newX][newY]) {
-                visited[newX][newY] = true
-                q.push([newX, newY])
+            let nx = x + dx[i]
+            let ny = y + dy[i]
+            if (isRange(nx, ny) && !visited[nx][ny] && grid[nx][ny] === 0) {
+                q.push([nx, ny])
+                visited[nx][ny] = true;
             }
         }
     }
 }
 
-for (let i = 0; i < startPoints.length; i++) {
-    let [a, b] = startPoints[i]
-    q.push([a - 1, b - 1])
-    visited[a - 1][b - 1] = true
-}
-
-bfs()
-
-
+BFS()
 
 let cnt = 0
 
@@ -70,6 +74,5 @@ for (let i = 0; i < n; i++) {
         if (visited[i][j]) cnt++
     }
 }
-
 
 console.log(cnt)
