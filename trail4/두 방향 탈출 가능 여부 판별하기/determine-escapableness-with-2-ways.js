@@ -7,8 +7,7 @@ const grid = input.slice(1, n + 1).map(row => row.split(' ').map(Number));
 // Please Write your code here.
 
 
-let visited = Array(n).fill(0).map(() => Array(m).fill(false));
-
+let visited = Array(n).fill(false).map(() => Array(m).fill(false))
 
 let dx = [0, 1]
 let dy = [1, 0]
@@ -17,29 +16,16 @@ function isRange(x, y) {
     return x >= 0 && x < n && y >= 0 && y < m
 }
 
-function canGo(x, y) {
-    if (!isRange(x, y))
-        return false
-
-    if (visited[x][y] === true || grid[x][y] === 0)
-        return false
-
-    return true
-}
-
-function dfs(a, b) {
+function dfs(x, y) {
+    visited[x][y] = true
     for (let i = 0; i < dx.length; i++) {
-        const newX = a + dx[i]
-        const newY = b + dy[i]
-
-        if (canGo(newX, newY)) {
-            visited[newX][newY] = true
-            dfs(newX, newY)
+        let nx = x + dx[i]
+        let ny = y + dy[i]
+        if (isRange(nx, ny) && visited[nx][ny] === false && grid[nx][ny] === 1) {
+            dfs(nx, ny)
         }
     }
 }
 
-visited[0][0] = true
 dfs(0, 0)
-
-console.log(+visited[n - 1][m - 1])
+console.log(visited[n-1][m-1]++)
