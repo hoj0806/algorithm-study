@@ -6,55 +6,44 @@ const grid = input.slice(1, 1 + Number(n)).map(line => line.split(' ').map(Numbe
 
 // Please Write your code here.
 
-
-
 let dx = [0, 1, 0, -1]
 let dy = [1, 0, -1, 0]
-let visited = Array(n).fill(0).map(() => Array(m).fill(false))
-
-function canGo(a, b) {
-    if (a < 0 || a >= n || b < 0 || b >= m) return false;
-
-    if (visited[a][b] === true) return false;
-
-    return true;
+let visited = Array(n).fill(false).map(() => Array(m).fill(false))
+let max = -1
+function isRange(x, y) {
+    return x >= 0 && x < n && y >= 0 && y < m
 }
 
-
+let cnt = 0
+let k = 0
 function dfs(x, y, rain) {
     visited[x][y] = true
 
     for (let i = 0; i < dx.length; i++) {
-        let newX = x + dx[i]
-        let newY = y + dy[i]
-        if (canGo(newX, newY) && grid[newX][newY] > rain) {
-            dfs(newX, newY, rain)
+        let nx = x + dx[i]
+        let ny = y + dy[i]
+        if (isRange(nx, ny) && visited[nx][ny] === false && grid[nx][ny] > rain) {
+            dfs(nx, ny, rain)
         }
     }
 
 }
 
-let k = 0
-let max = -1
-
-
-for (let precipitation = 1; precipitation <= 100; precipitation++) {
-
-    let cnt = 0
-    for (let i = 0; i < n; i++) {
-        for (let j = 0; j < m; j++) {
-            if (grid[i][j] > precipitation && !visited[i][j]) {
-                dfs(i, j, precipitation)
-                cnt++
+for (let i = 1; i <= 100; i++) {
+    cnt = 0
+    for (let j = 0; j < n; j++) {
+        for (let k = 0; k < m; k++) {
+            if (grid[j][k] > i && visited[j][k] === false && isRange(j, k)) {
+                cnt += 1
+                dfs(j, k, i)
             }
         }
     }
     if (cnt > max) {
         max = cnt
-        k = precipitation
+        k = i
     }
-    visited = Array(n).fill(0).map(() => Array(m).fill(false))
+    visited = Array(n).fill(false).map(() => Array(m).fill(false))
 }
-
 
 console.log(k, max)
