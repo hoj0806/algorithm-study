@@ -6,6 +6,8 @@ const a = input.slice(1, 1 + n).map(line => line.split(' ').map(Number));
 
 // Please Write your code here.
 
+// 0은 이동할수 있는 칸 1은 벽 2는 사람이 서있는곳 3은 비를 피할수 있는 공간
+
 class Queue {
     constructor() {
         this.q = []
@@ -29,58 +31,58 @@ class Queue {
 
 
 let answer = Array(n).fill(0).map(() => Array(n).fill(0))
-let visited = Array(n).fill(0).map(() => Array(n).fill(false))
-let step = Array(n).fill(0).map(() => Array(n).fill(-1))
-
-let q = new Queue()
-
-let dx = [0, 1, 0, -1]
-let dy = [1, 0, -1, 0]
 
 function isRange(x, y) {
     return x >= 0 && x < n && y >= 0 && y < n
 }
 
+let visited = Array(n).fill(false).map(() => Array(n).fill(false))
+let step = Array(n).fill(0).map(() => Array(n).fill(0))
 
-function bfs() {
-    while (!q.empty()) {
-        let curr = q.pop()
-        let [x, y] = curr
-
-        for (let i = 0; i < dx.length; i++) {
-            let newX = x + dx[i]
-            let newY = y + dy[i]
-            if (isRange(newX, newY) && a[newX][newY] !== 1 && step[newX][newY] === -1) {
-                q.push([newX, newY])
-                step[newX][newY] = step[x][y] + 1
-            }
-        }
-    }
-}
-
-
+let q = new Queue()
 
 for (let i = 0; i < n; i++) {
     for (let j = 0; j < n; j++) {
         if (a[i][j] === 3) {
             q.push([i, j])
-            step[i][j] = 0
+            visited[i][j] = true
         }
     }
 }
 
-bfs()
+let dx = [0, 1, 0, -1]
+let dy = [1, 0, -1, 0]
 
+function BFS() {
+    while (!q.empty()) {
+        let currV = q.pop()
+        let [x, y] = currV
 
+        for (let i = 0; i < dx.length; i++) {
+            let nx = x + dx[i]
+            let ny = y + dy[i]
+            if (isRange(nx, ny) && !visited[nx][ny] && a[nx][ny] !== 1) {
+                step[nx][ny] = step[x][y] + 1
+                q.push([nx, ny])
+                visited[nx][ny] = true
+            }
+        }
+    }
+}
+
+BFS()
 
 for (let i = 0; i < n; i++) {
     for (let j = 0; j < n; j++) {
         if (a[i][j] === 2) {
-            answer[i][j] = step[i][j]
-        } else {
-            answer[i][j] = 0
+            if (!visited[i][j]) {
+                answer[i][j] = -1
+            } else {
+                answer[i][j] = step[i][j]
+            }
         }
+
     }
 }
 
-answer.forEach(i => console.log(i.join(" ")))
+answer.forEach(row => console.log(row.join(" ")))
