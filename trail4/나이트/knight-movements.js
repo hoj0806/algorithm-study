@@ -27,30 +27,33 @@ class Queue {
     }
 }
 
-const visited = Array(n).fill(0).map(() => Array(n).fill(false))
-const step = Array(n).fill(0).map(() => Array(n).fill(0))
+let visited = Array(n).fill(false).map(() => Array(n).fill(false))
+let step = Array(n).fill(0).map(() => Array(n).fill(0))
+
+let q = new Queue()
+
+
 
 let dx = [-2, -1, 1, 2, 2, 1, -1, -2]
 let dy = [1, 2, 2, 1, -1, -2, -2, -1]
 
-let q = new Queue()
-
-function isRange(a, b) {
-    return a >= 0 && a < n && b >= 0 && b < n
+function isRange(x, y) {
+    return x >= 0 && x < n && y >= 0 && y < n
 }
 
-function bfs() {
+function BFS() {
     while (!q.empty()) {
-        let curr = q.pop()
-        let [x, y] = curr
+        let currV = q.pop()
+        let [x, y] = currV
+
 
         for (let i = 0; i < dx.length; i++) {
-            let newX = x + dx[i]
-            let newY = y + dy[i]
-            if (isRange(newX, newY) && !visited[newX][newY]) {
-                visited[newX][newY] = true
-                step[newX][newY] = step[x][y] + 1
-                q.push([newX, newY])
+            let nx = x + dx[i]
+            let ny = y + dy[i]
+            if (isRange(nx, ny) && !visited[nx][ny]) {
+                q.push([nx, ny])
+                visited[nx][ny] = true
+                step[nx][ny] = step[x][y] + 1
             }
         }
     }
@@ -58,5 +61,5 @@ function bfs() {
 
 q.push([r1, c1])
 visited[r1][c1] = true
-bfs()
+BFS()
 console.log(visited[r2][c2] ? step[r2][c2] : -1)
